@@ -15,7 +15,8 @@
         "format": "prettier-eslint --write $PWD/\"**/*.js\" $PWD/\"!node_modules/**\"",
         "lint": "eslint .",
         "test": "sanity check",
-        "bump": "npm --no-git-tag-version version"
+        "bump": "npm --no-git-tag-version version",
+        "postinstall": "lerna bootstrap"
     },
     "keywords": [
         "meezyart",
@@ -63,7 +64,7 @@
         "eslint-plugin-react": "^7.23.2",
         "eslint-plugin-standard": "^5.0.0",
         "prettier-eslint-cli": "^5.0.1",
-        "react-icons": "^4.2.0"
-
+        "react-icons": "^4.2.0",
+        "lerna": "^3.16.4"
     }
 }
