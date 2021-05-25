@@ -1,7 +1,7 @@
 {
     "root": true,
     "project": {
-        "name": "Hipline Sanity Studio CMS"
+        "name": "Hipline CMS"
     },
     "api": {
         "projectId": "00prkzk3",
