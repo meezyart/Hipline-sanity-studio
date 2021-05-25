@@ -1,0 +1,49 @@
+{
+    "root": true,
+    "project": {
+        "name": "Meezyart Sanity Starter CMS"
+    },
+    "api": {
+        "projectId": "36o9gdhb",
+        "dataset": "production"
+    },
+    "plugins": [
+        "@sanity/base",
+        "@sanity/components",
+        "@sanity/default-layout",
+        "@sanity/default-login",
+        "@sanity/dashboard",
+        "@sanity/desk-tool",
+        "dashboard-widget-structure-menu",
+        "dashboard-widget-netlify",
+        "media"
+    ],
+    "env": {
+        "development": {
+            "plugins": [
+                "@sanity/vision"
+            ]
+        }
+    },
+    "parts": [{
+            "name": "part:@sanity/base/schema",
+            "path": "./schemas/schema"
+        },
+        {
+            "name": "part:@sanity/desk-tool/structure",
+            "path": "./parts/deskStructure.js"
+        },
+        {
+            "implements": "part:@sanity/dashboard/config",
+            "path": "./parts/dashboardConfig.js"
+        },
+        {
+            "name": "part:@sanity/base/new-document-structure",
+            "path": "./parts/newDocumentStructure.js"
+        },
+        {
+            "implements": "part:@sanity/base/theme/variables/override-style",
+            "path": "./styles/variables.css"
+        }
+    ]
+}
