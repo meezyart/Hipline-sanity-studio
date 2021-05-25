@@ -3,6 +3,9 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 // Documents
 import page from './documents/page'
+
+// hipline
+import choreographers from './documents/hipline/choreographers'
 import article from './documents/articles/article'
 import articleCategory from './documents/articles/category'
 import sectionsHeader from './documents/sections/header'
@@ -19,6 +22,7 @@ import richTextBlock from './objects/blocks/richText'
 // import imageBlock from './objects/blocks/image'
 import youtubeBlock from './objects/blocks/youtube'
 import vimeoBlock from './objects/blocks/vimeo'
+import socialBlock from './objects/blocks/socialBlock'
 import cta from './objects/cta'
 
 import simpleBlockContent from './objects/blocks/simpleBlockContent'
@@ -54,6 +58,7 @@ export default createSchema({
         settingsFavicons,
         settingsSocial,
         settingsAnalytics,
+        choreographers,
         // article,
         // articleCategory,
 
@@ -70,6 +75,7 @@ export default createSchema({
         // imageBlock,
         youtubeBlock,
         vimeoBlock,
+        socialBlock,
         simpleSection,
         richTextSection,
         faqSection,
