@@ -1,10 +1,10 @@
 {
     "root": true,
     "project": {
-        "name": "Meezyart Sanity Starter CMS"
+        "name": "Hipline Sanity Studio CMS"
     },
     "api": {
-        "projectId": "36o9gdhb",
+        "projectId": "00prkzk3",
         "dataset": "production"
     },
     "plugins": [
