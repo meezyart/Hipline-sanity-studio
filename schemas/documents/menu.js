@@ -16,7 +16,7 @@ export default {
             title: 'Menu Items',
             type: 'array',
             of: [{
-                type: 'menuItem'
+                type: 'cta'
             }]
         }
     ]

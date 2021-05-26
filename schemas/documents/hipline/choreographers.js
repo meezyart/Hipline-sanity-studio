@@ -1,7 +1,7 @@
 import { CgGirl } from 'react-icons/cg'
 
 export default {
-    name: 'dancer',
+    name: 'choreographers',
     title: 'Choreographers',
     type: 'document',
     icon: CgGirl,
@@ -100,10 +100,13 @@ export default {
                 {
                     name: 'classType',
                     title: 'Classes',
-                    description: 'Choose a Class that this Choreographer teaches',
+                    description: 'Choose the Classes that this Choreographer teaches',
                     type: 'array',
                     of: [{ type: 'string' }], // TODO change to class type
-                    layout: 'tags'
+                    options: {
+                        layout: 'tags'
+                    },
+                    validation: Rule => Rule.unique()
                 }
             ]
         },
@@ -121,12 +124,13 @@ export default {
                     title: 'Example Bands/musicians',
                     description: 'Limit 5',
                     type: 'array',
-                    of: [{ type: 'string' }], // TODO change to class type
-                    layout: 'tags'
+                    of: [{ type: 'string' }],
+                    validation: Rule => Rule.unique()
                 },
                 {
                     name: 'spotify',
                     title: 'Spotify Playlist',
+                    description: 'Url to your Spotify playlist',
                     type: 'url'
                 }
             ]

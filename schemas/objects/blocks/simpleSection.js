@@ -15,7 +15,7 @@ export default {
             description: 'Used as the heading of this section.'
         },
         {
-            name: 'mainContent',
+            name: 'content',
             title: 'Main Content',
             type: 'excerptPortableText',
             description: 'Used as the content of this section.'

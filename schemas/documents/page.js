@@ -49,11 +49,11 @@ export default {
                 }
             ]
         },
-        {
-            name: 'linkChoice',
-            title: 'Link',
-            type: 'link',
-            // description: 'testing links'
-        }
+        // {
+        //     name: 'linkChoice',
+        //     title: 'Link',
+        //     type: 'link',
+        //     // description: 'testing links'
+        // }
     ]
 }

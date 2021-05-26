@@ -1,8 +1,8 @@
 {
-    "name": "meezyart-sanity-starter-cms",
+    "name": "hipline-sanity-cms",
     "private": true,
     "version": "1.0.0",
-    "description": "Meezyart Sanity Starter CMS",
+    "description": "Hipline Sanity CMS",
     "main": "package.json",
     "author": "Gamel <gamel@meezyart.com>",
     "engines": {

@@ -6,6 +6,7 @@ import page from './documents/page'
 
 // hipline
 import choreographers from './documents/hipline/choreographers'
+import classMenu from './documents/hipline/classMenu'
 import article from './documents/articles/article'
 import articleCategory from './documents/articles/category'
 import sectionsHeader from './documents/sections/header'
@@ -59,8 +60,9 @@ export default createSchema({
         settingsSocial,
         settingsAnalytics,
         choreographers,
-        // article,
-        // articleCategory,
+        classMenu,
+        article,
+        articleCategory,
 
         /* Objects */
         // bioPortableText,

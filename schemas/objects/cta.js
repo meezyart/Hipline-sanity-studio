@@ -7,9 +7,7 @@ export default {
         name: 'link',
         description: 'Only the first value of these will be used'
     }],
-    fields: [
-
-        {
+    fields: [{
             title: 'Title',
             name: 'title',
             type: 'string'
@@ -32,19 +30,16 @@ export default {
             title: 'External link',
             name: 'link',
             type: 'string',
-            description: 'Example: https://www.sanity.io',
+            description: 'Example: https://www.myhipline.com',
             fieldset: 'link'
         },
         {
-            title: 'Kind',
-            name: 'kind',
-            type: 'string',
-            options: {
-                layout: 'radio',
-                list: ['button', 'link']
-            }
+            name: 'openInNewTab',
+            title: 'Open In New Tab?',
+            description: 'Set to true if this link should open in a new tab.',
+            type: 'boolean',
+            // fieldset: 'externalLink'
         }
-
     ],
     preview: {
         select: {

@@ -5,13 +5,16 @@ import {
     MdApps,
     MdViewAgenda,
     MdMenu,
+    MdCollectionsBookmark,
     MdLink,
     MdSettings,
+    MdRssFeed,
     MdBuild,
     MdLanguage,
     MdPeople,
     MdShowChart
 } from 'react-icons/md'
+
 
 import { GoBrowser as PageIcon, GoHome, GoSettings } from "react-icons/go"
 
@@ -25,9 +28,11 @@ const hiddenDocTypes = listItem =>
         'author',
         'category',
         'route',
+        'pressCategory',
         'sectionsHeader',
         'sectionsFooter',
         'settingsSeo',
+        'article',
         'settingsFavicons',
         'settingsSocial',
         'settingsAnalytics'
@@ -38,52 +43,53 @@ export default () =>
 S.list()
     .title('Site Content')
     .items([
-        S.divider(),
+        // S.divider(),
         S.documentTypeListItem('page')
         .title('Pages')
         .icon(MdDescription),
         // Use For Sample
-        // S.listItem()
-        // .title('Articles')
-        // .icon(MdCreate)
-        // .child(
-        //     S.list()
-        //     .title('Articles')
-        //     .items([
-        //         S.documentTypeListItem('article')
-        //         .title('All Articles')
-        //         .icon(MdCreate),
-        //         S.listItem()
-        //         .title('Articles By Category')
-        //         .icon(MdCreate)
-        //         .child(
-        //             S.documentTypeList('articleCategory')
-        //             .title('Articles By Category')
-        //             .child(catId =>
-        //                 S.documentList()
-        //                 .schemaType('article')
-        //                 .title('Articles')
-        //                 .filter(
-        //                     '_type == "article" && $catId in categories[]._ref'
-        //                 )
-        //                 .params({
-        //                     catId
-        //                 })
-        //             )
-        //         ),
-        //         S.documentTypeListItem('articleCategory')
-        //         .title('Categories')
-        //         .icon(MdApps)
-        //     ])
-        // ),
-
-        S.documentTypeListItem('route')
-        .title('Page Routes')
-        .icon(MdLink),
-        S.documentTypeListItem('menu')
-        .title('Menus')
-        .icon(MdMenu),
         ...S.documentTypeListItems().filter(hiddenDocTypes),
+
+        S.listItem()
+        .title('Press')
+        .icon(MdRssFeed)
+        .child(
+            S.list()
+            .title('Articles')
+            .items([
+                S.documentTypeListItem('article')
+                .title('All Articles')
+                .icon(MdCollectionsBookmark),
+                S.listItem()
+                .title('Articles By Category')
+                .icon(MdCollectionsBookmark)
+                .child(
+                    S.documentTypeList('pressCategory')
+                    .title('Articles By Category')
+                    .child(catId =>
+                        S.documentList()
+                        .schemaType('article')
+                        .title('Articles')
+                        .filter(
+                            '_type == "article" && $catId in categories[]._ref'
+                        )
+                        .params({
+                            catId
+                        })
+                    )
+                ),
+                S.documentTypeListItem('pressCategory')
+                .title('Categories')
+                .icon(MdApps)
+            ])
+        ),
+
+        // S.documentTypeListItem('route')
+        // .title('Page Routes')
+        // .icon(MdLink),
+        // S.documentTypeListItem('menu')
+        // .title('Menus')
+        // .icon(MdMenu),
         S.divider(),
         S.listItem()
         .title('Sections')
@@ -109,6 +115,42 @@ S.list()
                     .title('Footer')
                     .schemaType('sectionsFooter')
                     .documentId('sectionsFooter')
+                )
+            ])
+        ),
+        S.listItem()
+        .title('Page Builder')
+        .icon(MdDescription)
+        .child(
+            S.list()
+            .title('Landing Pages')
+            .items([
+                S.listItem()
+                .title('Navigation Menus')
+                .icon(MdMenu)
+                .schemaType('menu')
+                .child(S.documentTypeList('menu').title('Navigation Menus')),
+                S.listItem()
+                .title('Page Routes')
+                .schemaType('route')
+                .child(
+                    S.documentTypeList('route')
+                    .title('Page Routes')
+                    .child(documentId =>
+                        S.document()
+                        .documentId(documentId)
+                        .schemaType('route')
+                        .views([S.view.form()])
+                    )
+                ),
+                S.listItem()
+                .title('Pages')
+                .schemaType('page')
+                .child(
+                    S.documentList('page')
+                    .title('Pages')
+                    .menuItems(S.documentTypeList('page').getMenuItems())
+                    .filter('_type == "page"')
                 )
             ])
         ),

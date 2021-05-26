@@ -30,6 +30,7 @@ export default {
                 type: 'page'
             }]
         },
+
         {
             name: 'slug',
             type: 'slug',
@@ -54,6 +55,19 @@ export default {
             name: 'useSiteTitle',
             type: 'boolean'
         },
+        // {
+        //     name: 'linkExternal',
+        //     title: 'External URL',
+        //     type: 'url',
+        //     description: 'Example: https://www.meezyart.com',
+        //     validation: false
+        // },
+        // {
+        //     name: 'openInNewTab',
+        //     title: 'Open In New Tab?',
+        //     description: 'Set to true if this link should open in a new tab.',
+        //     type: 'boolean'
+        // },
         {
             title: 'Open Graph (Seo)',
             name: 'openGraph',
@@ -75,20 +89,20 @@ export default {
             fieldset: 'visibility'
         },
         /*
-            // This can be used by a server-side rendered website. We plan to figure out proper JAMstack support
-            {
-              name: 'queries',
-              type: 'array',
-              description: 'Used to return personalized content based on paid search terms and remarketing',
-              of: [
-                {
-                  type: 'string'
-                }
-              ],
-              options: {
-                layout: 'tags'
-              }
-            }, */
+                            // This can be used by a server-side rendered website. We plan to figure out proper JAMstack support
+                            {
+                              name: 'queries',
+                              type: 'array',
+                              description: 'Used to return personalized content based on paid search terms and remarketing',
+                              of: [
+                                {
+                                  type: 'string'
+                                }
+                              ],
+                              options: {
+                                layout: 'tags'
+                              }
+                            }, */
         {
             name: 'campaign',
             type: 'string',
@@ -96,12 +110,12 @@ export default {
             description: 'UTM for campaings'
         }
         /*
-            // This can be used by a server-side rendered website. We plan to figure out proper JAMstack support
-            {
-              name: 'experiment',
-              type: 'experiment',
-              description: 'Use this to A/B/n test this route towards different pages',
-            }, */
+                            // This can be used by a server-side rendered website. We plan to figure out proper JAMstack support
+                            {
+                              name: 'experiment',
+                              type: 'experiment',
+                              description: 'Use this to A/B/n test this route towards different pages',
+                            }, */
     ],
     preview: {
         select: {

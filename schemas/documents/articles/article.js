@@ -40,25 +40,16 @@ export default {
                 type: 'reference',
                 icon: MdCreate,
                 to: [{
-                    type: 'articleCategory'
+                    type: 'pressCategory'
                 }],
                 weak: true
             }]
         },
         {
             name: 'featuredImage',
-            title: 'Featured Image',
+            title: 'Hero Image',
             type: 'mainImage',
-            description: 'Will be displayed at the top of the article detail page and used for the social share image.',
-            fields: [{
-                name: 'alternativeText',
-                type: 'string',
-                title: 'Alternative Text',
-                description: 'Used for SEO and accessiblity.',
-                options: {
-                    isHighlighted: true
-                }
-            }]
+            description: 'Will be displayed at the top of the article detail page and used for the social share image.'
         },
         {
             name: 'excerpt',
@@ -76,7 +67,12 @@ export default {
             name: 'articleMetaData',
             title: 'Article Meta Data',
             type: 'openGraph',
-            description: 'All fields are optional and will overwrite any default settings when specified.'
+            description: 'All fields are optional and will overwrite any default settings when specified.',
+            options: {
+                collapsible: true, // Makes the whole fieldset collapsible
+                // collapsed: false // Defines if the fieldset should be collapsed by default or not
+                // columns: 2 // Defines a grid for the fields and how many columns it should have
+            }
         }
     ],
     initialValue: {
