@@ -8,19 +8,19 @@ export default {
         description: 'Only the first value of these will be used'
     }],
     fields: [{
-            title: 'Title',
+            title: 'Button Title',
             name: 'title',
             type: 'string'
         },
         {
-            title: 'Landing page',
+            title: 'Landing page (Internal Link)',
             name: 'landingPageRoute',
             type: 'reference',
             fieldset: 'link',
             to: [{ type: 'route' }]
         },
         {
-            title: 'Path',
+            title: 'Path  (Internal Link)',
             name: 'route',
             fieldset: 'link',
             description: 'Example: /blog',
