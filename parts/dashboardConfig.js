@@ -24,8 +24,8 @@ export default {
                 title: 'Netlify Deploys',
                 description: 'NOTE: Because these sites are static builds, they need to be re-deployed to see the changes when documents are published.',
                 sites: [{
-                        buildHookId: '6041599a1dd2e419a608eae5',
-                        title: 'Sanity Studio',
+                        buildHookId: '60af41ad4f3c36a1abf0e656',
+                        title: 'Sanity Studio Hipline',
                         name: 'hipline-sanity-studio',
                         apiId: 'e6e9e62f-f363-4bba-a984-5b9ef6145507'
                     },

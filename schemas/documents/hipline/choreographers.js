@@ -125,7 +125,8 @@ export default {
                     description: 'Limit 5',
                     type: 'array',
                     of: [{ type: 'string' }],
-                    validation: Rule => Rule.unique()
+                    validation: Rule => Rule.unique(),
+                    validation: Rule => Rule.max(5)
                 },
                 {
                     name: 'spotify',

@@ -35,6 +35,7 @@ const hiddenDocTypes = listItem =>
         'passCategory',
         'sectionsHeader',
         'sectionsFooter',
+        'divider',
         'settingsSeo',
         'article',
         'settingsFavicons',
