@@ -3,6 +3,7 @@ import {
     MdDescription,
     MdCreate,
     MdApps,
+    MdNextWeek,
     MdViewAgenda,
     MdMenu,
     MdCollectionsBookmark,
@@ -29,6 +30,9 @@ const hiddenDocTypes = listItem =>
         'category',
         'route',
         'pressCategory',
+        'passesMenu',
+        'passBlock',
+        'passCategory',
         'sectionsHeader',
         'sectionsFooter',
         'settingsSeo',
@@ -47,9 +51,41 @@ S.list()
         S.documentTypeListItem('page')
         .title('Pages')
         .icon(MdDescription),
-        // Use For Sample
+        // Imcoming
         ...S.documentTypeListItems().filter(hiddenDocTypes),
-
+        S.listItem()
+        .title('Passes')
+        .icon(MdNextWeek)
+        .child(
+            S.list()
+            .title('Passes Sections')
+            .items([
+                S.documentTypeListItem('passesMenu')
+                .title('Passes Sections')
+                .icon(MdCollectionsBookmark),
+                // .child(
+                //     S.documentTypeList('passCategory')
+                //     .title('Passes By Section')
+                //     .child(catId =>
+                //         S.documentList()
+                //         .schemaType('passesMenu')
+                //         .title('Passes')
+                //         .filter(
+                //             '_type == "passBlock" && $catId in passCategory[]._ref'
+                //         )
+                //         .params({
+                //             catId
+                //         })
+                //     )
+                // ),
+                S.documentTypeListItem('passBlock')
+                .title('All Passes')
+                .icon(MdCollectionsBookmark),
+                S.documentTypeListItem('passCategory')
+                .title('Pass Sections/Catergory')
+                .icon(MdApps)
+            ])
+        ),
         S.listItem()
         .title('Press')
         .icon(MdRssFeed)

@@ -7,6 +7,9 @@ import page from './documents/page'
 // hipline
 import choreographers from './documents/hipline/choreographers'
 import classMenu from './documents/hipline/classMenu'
+import classPass from './documents/hipline/classPass'
+import passCategory from './documents/hipline/passCategory'
+import passBlock from './objects/hipline/pass'
 import article from './documents/articles/article'
 import articleCategory from './documents/articles/category'
 import sectionsHeader from './documents/sections/header'
@@ -63,7 +66,9 @@ export default createSchema({
         classMenu,
         article,
         articleCategory,
-
+        classPass,
+        passBlock,
+        passCategory,
         /* Objects */
         // bioPortableText,
         // bodyPortableText,

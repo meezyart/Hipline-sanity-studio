@@ -14,7 +14,7 @@ export default {
         },
         {
             name: 'instagramHandle',
-            title: 'instagram Handle',
+            title: 'Instagram Handle',
             description: 'the name after slash instagram.com/hipline" example: hipline',
             type: 'string'
         }
