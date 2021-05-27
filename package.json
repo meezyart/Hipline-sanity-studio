@@ -3,7 +3,7 @@
     "private": true,
     "version": "1.0.0",
     "description": "Hipline Sanity CMS",
-    "main": "package.json",
+    "hipline": "package.json",
     "author": "Gamel <gamel@meezyart.com>",
     "engines": {
         "node": ">=12.0.0"
