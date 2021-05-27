@@ -85,7 +85,7 @@ export default {
         },
         {
             name: 'dancerClass',
-            title: 'Class Type',
+            title: 'Class Related',
             type: 'object',
             options: {
                 collapsible: true, // Makes the whole fieldset collapsible
@@ -97,17 +97,17 @@ export default {
                     title: 'Class Exceptions',
                     type: 'excerptPortableText'
                 },
-                {
-                    name: 'classType',
-                    title: 'Classes',
-                    description: 'Choose the Classes that this Choreographer teaches',
-                    type: 'array',
-                    of: [{ type: 'string' }], // TODO change to class type
-                    options: {
-                        layout: 'tags'
-                    },
-                    validation: Rule => Rule.unique()
-                }
+                // {
+                //     name: 'classType',
+                //     title: 'Classes',
+                //     description: 'Choose the Classes that this Choreographer teaches',
+                //     type: 'array',
+                //     of: [{ type: 'string' }], // TODO change to class type
+                //     options: {
+                //         layout: 'tags'
+                //     },
+                //     validation: Rule => Rule.unique()
+                // }
             ]
         },
         {
