@@ -20,6 +20,9 @@ import settingsSeo from './documents/settings/seo'
 import settingsFavicons from './documents/settings/favicons'
 import settingsSocial from './documents/settings/social'
 import settingsAnalytics from './documents/settings/analytics'
+import settingsContactInfo from './documents/settings/contactInfo'
+import settingsLogo from './documents/settings/logo'
+import settingsAnnouncements from './documents/settings/announcements'
 
 // Objects
 import richTextBlock from './objects/blocks/richText'
@@ -62,6 +65,9 @@ export default createSchema({
         settingsFavicons,
         settingsSocial,
         settingsAnalytics,
+        settingsContactInfo,
+        settingsAnnouncements,
+        settingsLogo,
         choreographers,
         classMenu,
         article,

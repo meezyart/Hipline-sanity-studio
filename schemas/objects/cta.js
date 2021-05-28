@@ -37,8 +37,8 @@ export default {
             name: 'openInNewTab',
             title: 'Open In New Tab?',
             description: 'Set to true if this link should open in a new tab.',
-            type: 'boolean',
-            // fieldset: 'externalLink'
+            type: 'boolean'
+                // fieldset: 'externalLink'
         }
     ],
     preview: {

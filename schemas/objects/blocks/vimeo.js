@@ -5,7 +5,7 @@ const Preview = ({value}) => {
   const {url} = value
   return (
     <>
-      <Vimeo video={url} className='embed' />
+      <Vimeo video={url} className="embed" />
       <style jsx>{`
         .embed {
           position: relative;

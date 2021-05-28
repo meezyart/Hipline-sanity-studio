@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import Fieldset from 'part:@sanity/components/fieldsets/default'
-import { setIfMissing } from 'part:@sanity/form-builder/patch-event'
+import {setIfMissing} from 'part:@sanity/form-builder/patch-event'
 // FormBuilderInput automatically generates fields from a schema
-import { FormBuilderInput } from 'part:@sanity/form-builder'
+import {FormBuilderInput} from 'part:@sanity/form-builder'
 // a Higher Order Component that passes document values as props
-import { withDocument } from 'part:@sanity/form-builder'
+import {withDocument} from 'part:@sanity/form-builder'
 class conditionalFields extends React.PureComponent {
   static propTypes = {
     type: PropTypes.shape({
@@ -21,9 +21,10 @@ class conditionalFields extends React.PureComponent {
     onChange: PropTypes.func.isRequired,
     onBlur: PropTypes.func.isRequired
   }
+
   firstFieldInput = React.createRef()
   handleFieldChange = (field, fieldPatchEvent) => {
-    const { onChange, type } = this.props
+    const {onChange, type} = this.props
     // Whenever the field input emits a patch event, we need to make sure to each of the included patches
     // are prefixed with its field name, e.g. going from:
     // {path: [], set: <nextvalue>} to {path: [<fieldName>], set: <nextValue>}
@@ -31,13 +32,15 @@ class conditionalFields extends React.PureComponent {
     onChange(
       fieldPatchEvent
         .prefixAll(field.name)
-        .prepend(setIfMissing({ _type: type.name }))
+        .prepend(setIfMissing({_type: type.name}))
     )
   }
-  focus() {
+
+  focus () {
     this.firstFieldInput.current.focus()
   }
-  render() {
+
+  render () {
     console.log(this.props)
     const {
       document,
@@ -48,7 +51,7 @@ class conditionalFields extends React.PureComponent {
       onFocus,
       onBlur
     } = this.props
-    let condition = this.props && this.props.value && this.props.value.condition
+    const condition = this.props && this.props.value && this.props.value.condition
     return (
       <Fieldset
         level={level}
@@ -74,7 +77,7 @@ class conditionalFields extends React.PureComponent {
           ))}
           <br />
           {type.fields[1].type.fields
-            .filter(field => (field.name === condition ? true : false))
+            .filter(field => (field.name === condition))
             .map((field, i) => (
               // Delegate to the generic FormBuilderInput. It will resolve and insert the actual input component
               // for the given field type

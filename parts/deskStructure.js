@@ -8,6 +8,9 @@ import {
     MdMenu,
     MdCollectionsBookmark,
     MdLink,
+    MdDonutSmall,
+    MdContactPhone,
+    MdHearing,
     MdSettings,
     MdRssFeed,
     MdBuild,
@@ -16,9 +19,7 @@ import {
     MdShowChart
 } from 'react-icons/md'
 
-
-import { GoBrowser as PageIcon, GoHome, GoSettings } from "react-icons/go"
-
+import { GoBrowser as PageIcon, GoHome, GoSettings } from 'react-icons/go'
 
 const hiddenDocTypes = listItem =>
     ![
@@ -40,9 +41,11 @@ const hiddenDocTypes = listItem =>
         'article',
         'settingsFavicons',
         'settingsSocial',
-        'settingsAnalytics'
+        'settingsAnalytics',
+        'settingsContactInfo',
+        'settingsAnnouncements',
+        'settingsLogo'
     ].includes(listItem.getId())
-
 
 export default () =>
 S.list()
@@ -234,6 +237,33 @@ S.list()
                     .title('Analytics')
                     .schemaType('settingsAnalytics')
                     .documentId('settingsAnalytics')
+                ),
+                S.listItem()
+                .title('Contact Info')
+                .icon(MdContactPhone)
+                .child(
+                    S.document()
+                    .title('Contact Info')
+                    .schemaType('settingsContactInfo')
+                    .documentId('settingsContactInfo')
+                ),
+                S.listItem()
+                .title('Site Announcements')
+                .icon(MdHearing)
+                .child(
+                    S.document()
+                    .title('Site Announcements')
+                    .schemaType('settingsAnnouncements')
+                    .documentId('settingsAnnouncements')
+                ),
+                S.listItem()
+                .title('Site Logo')
+                .icon(MdDonutSmall)
+                .child(
+                    S.document()
+                    .title('Site Logo')
+                    .schemaType('settingsLogo')
+                    .documentId('settingsLogo')
                 )
             ])
         )
