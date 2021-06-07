@@ -1,4 +1,4 @@
-import {MdApps} from 'react-icons/md'
+import { MdApps } from 'react-icons/md'
 
 export default {
   name: 'passCategory',

@@ -1,4 +1,4 @@
-import {MdAssignment} from 'react-icons/md'
+import { MdAssignment } from 'react-icons/md'
 
 export default {
   name: 'classMenu',
@@ -26,7 +26,7 @@ export default {
       of: [
         {
           type: 'reference',
-          to: [{type: 'choreographers'}]
+          to: [{ type: 'choreographers' }]
         }
       ],
       validation: Rule => Rule.unique()
@@ -45,7 +45,7 @@ export default {
       title: 'Cover Video',
       description:
         'Select Recommended dimensions - 537 x 429, Filesize - less than 500 k(800 k max)',
-      of: [{type: 'file'}]
+      of: [{ type: 'file' }]
     },
     {
       name: 'classImages',
@@ -53,7 +53,7 @@ export default {
       title: 'Cover Images',
       description:
         'Select Recommended dimensions - 537 x 429, Filesizea\n - less than 500 k(800 k max)',
-      of: [{type: 'mainImage'}]
+      of: [{ type: 'mainImage' }]
     }
   ]
 }

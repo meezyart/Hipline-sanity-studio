@@ -1,4 +1,4 @@
-import {MdDonutSmall} from 'react-icons/md'
+import { MdDonutSmall } from 'react-icons/md'
 
 export default {
   name: 'settingsLogo',

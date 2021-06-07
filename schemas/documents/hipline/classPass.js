@@ -1,5 +1,5 @@
-import {IoTicket} from 'react-icons/io'
-import {MdCreate} from 'react-icons/md'
+import { IoTicket } from 'react-icons/io'
+import { MdCreate } from 'react-icons/md'
 
 export default {
   name: 'passesMenu',
@@ -44,7 +44,7 @@ export default {
         {
           type: 'reference',
           icon: MdCreate,
-          to: [{type: 'passCategory'}],
+          to: [{ type: 'passCategory' }],
           weak: true
         }
       ],

@@ -1,4 +1,4 @@
-import {MdVideocam, MdPhotoCamera} from 'react-icons/md'
+import { MdVideocam, MdPhotoCamera } from 'react-icons/md'
 
 import InstagramPreview from '../../components/preview/Instagram'
 import EmbedPlayer from '../../components/preview/EmbedPlayer'
@@ -16,7 +16,7 @@ export const instagram = {
     }
   ],
   preview: {
-    select: {url: 'url'},
+    select: { url: 'url' },
     component: InstagramPreview
   }
 }
@@ -33,7 +33,7 @@ export const videoEmbed = {
     }
   ],
   preview: {
-    select: {url: 'url'},
+    select: { url: 'url' },
     component: EmbedPlayer
   }
 }

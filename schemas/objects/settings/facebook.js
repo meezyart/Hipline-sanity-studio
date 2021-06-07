@@ -1,4 +1,4 @@
-import {MdPerson} from 'react-icons/md'
+import { MdPerson } from 'react-icons/md'
 
 export default {
   name: 'socialSiteFacebook',
@@ -17,8 +17,7 @@ export default {
     {
       name: 'facebookHandle',
       title: 'Facebook Handle',
-      description:
-        'the name after slash facebook.com/hipline" example: hipline',
+      description: 'the name after slash facebook.com/hipline" example: hipline',
       type: 'string'
     }
   ],
@@ -27,14 +26,10 @@ export default {
       url: 'facebookUrl',
       handle: 'facebookHandle'
     },
-    prepare ({url, handle}) {
+    prepare({ url, handle }) {
       return {
         title: 'Facebook',
-        subtitle: url
-          ? `Url: ${url}`
-          : null || handle
-            ? `Handle: /${handle}`
-            : 'Nothing Set'
+        subtitle: url ? `Url: ${url}` : null || handle ? `Handle: /${handle}` : 'Nothing Set'
       }
     }
   }

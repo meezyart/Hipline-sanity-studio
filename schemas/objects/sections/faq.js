@@ -12,12 +12,12 @@ export default {
       name: 'faqItems',
       title: 'Faq',
       type: 'array',
-      of: [{type: 'simpleSection'}],
+      of: [{ type: 'simpleSection' }],
       description: 'Used For questions and Answers'
     }
   ],
   preview: {
-    prepare () {
+    prepare() {
       return {
         title: 'FAQ Section'
       }

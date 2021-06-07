@@ -1,4 +1,4 @@
-import {CgGirl} from 'react-icons/cg'
+import { CgGirl } from 'react-icons/cg'
 
 export default {
   name: 'choreographers',
@@ -131,7 +131,7 @@ export default {
           title: 'Example Bands/musicians',
           description: 'Limit 5',
           type: 'array',
-          of: [{type: 'string'}],
+          of: [{ type: 'string' }],
           validation: Rule => Rule.unique(),
           validation: Rule => Rule.max(5)
         },
@@ -154,12 +154,19 @@ export default {
       }
     },
     {
+      name: 'coverVideoMain',
+      type: 'fileAsset',
+      title: 'Cover Video Main',
+      description:
+        'Search for Recommended dimensions - 537 x 429, Filesize - less than 500 k(800 k max)'
+    },
+    {
       name: 'coverVideos',
       type: 'array',
-      title: 'Cover Video',
+      title: 'Additional Videos',
       description:
         'Select Recommended dimensions - 537 x 429, Filesize - less than 500 k(800 k max)',
-      of: [{type: 'file'}]
+      of: [{ type: 'file' }]
     },
     {
       name: 'coverImages',
@@ -167,7 +174,7 @@ export default {
       title: 'Cover Images',
       description:
         'Select Recommended dimensions - 537 x 429, Filesizea\n - less than 500 k(800 k max)',
-      of: [{type: 'mainImage'}]
+      of: [{ type: 'mainImage' }]
     }
     // {
     //     name: 'slug',

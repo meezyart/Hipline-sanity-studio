@@ -19,25 +19,24 @@ export default {
       // correspond to HTML tags, but you can set a custom title and/or value
       // and decide how it will be formatted or displayed where your content is used.
       styles: [
-        {title: 'Normal', value: 'normal'},
-        {title: 'H1', value: 'h1'},
-        {title: 'H2', value: 'h2'},
-        {title: 'H3', value: 'h3'},
-        {title: 'H4', value: 'h4'},
-        {title: 'Quote', value: 'blockquote'}
+        { title: 'Normal', value: 'normal' },
+        { title: 'H1', value: 'h1' },
+        { title: 'H2', value: 'h2' },
+        { title: 'H3', value: 'h3' },
+        { title: 'H4', value: 'h4' },
+        { title: 'Quote', value: 'blockquote' }
       ],
       lists: [
-        {title: 'Bullet', value: 'bullet'},
-        {title: 'Number', value: 'number'}
+        { title: 'Bullet', value: 'bullet' },
+        { title: 'Number', value: 'number' }
       ],
       // Marks let you mark up inline text in the block editor.
       marks: {
         // Decorators usually describe a single property – e.g. a typographic
         // preference or highlighting by editors.
         decorators: [
-          {title: 'Strong', value: 'strong'},
-          {title: 'Emphasis', value: 'em'},
-          {title: 'Code', value: 'code'},
+          { title: 'Strong', value: 'strong' },
+          { title: 'Emphasis', value: 'em' },
           {
             title: 'Highlight',
             value: 'highlight',
@@ -48,15 +47,15 @@ export default {
           }
 
           /*
-                    {
-                      title: 'Math',
-                      value: 'latex',
-                      blockEditor: {
-                        icon: latexIcon,
-                        render: latexRender
-                      }
-                    }
-                    */
+                              {
+                                title: 'Math',
+                                value: 'latex',
+                                blockEditor: {
+                                  icon: latexIcon,
+                                  render: latexRender
+                                }
+                              }
+                              */
         ],
         // Annotations can be any object structure – e.g. a link or a footnote.
         annotations: [
@@ -75,8 +74,8 @@ export default {
         ]
       },
       of: [
-        {type: 'authorReference'},
-        {type: 'math', icon: mathInlineIcon, title: 'Inline math'}
+        { type: 'authorReference' },
+        { type: 'math', icon: mathInlineIcon, title: 'Inline math' }
       ]
     },
     // You can add additional types here. Note that you can't use
@@ -84,16 +83,16 @@ export default {
     // as a block type.
     {
       type: 'mainImage',
-      options: {hotspot: true}
+      options: { hotspot: true }
     },
-    {type: 'instagram'},
-    {type: 'videoEmbed'},
+    { type: 'instagram' },
+    { type: 'videoEmbed' },
     {
       type: 'youtubeBlock'
     },
     {
       type: 'vimeoBlock'
     },
-    {type: 'math', icon: mathIcon, title: 'Math block'}
+    { type: 'math', icon: mathIcon, title: 'Math block' }
   ]
 }

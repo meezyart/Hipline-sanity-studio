@@ -1,8 +1,8 @@
 import React from 'react'
 import Vimeo from '@u-wave/react-vimeo'
 
-const Preview = ({value}) => {
-  const {url} = value
+const Preview = ({ value }) => {
+  const { url } = value
   return (
     <>
       <Vimeo video={url} className="embed" />

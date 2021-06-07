@@ -20,7 +20,7 @@ export default {
       title: 'heading',
       disabled: 'disabled'
     },
-    prepare ({title, disabled}) {
+    prepare({ title, disabled }) {
       return {
         title: `${disabled ? 'DISABLED: ' : ''}${title || 'Latest Articles'}`
       }

@@ -1,4 +1,4 @@
-import {MdPeople} from 'react-icons/md'
+import { MdPeople } from 'react-icons/md'
 
 export default {
   name: 'settingsSocial',

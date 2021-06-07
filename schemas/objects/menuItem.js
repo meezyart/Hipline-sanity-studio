@@ -1,9 +1,9 @@
 import client from 'part:@sanity/base/client'
-import {MdCreate} from 'react-icons/md'
+import { MdCreate } from 'react-icons/md'
 
-function myAsyncSlugifier (input) {
+function myAsyncSlugifier(input) {
   const query = '*[_id == $id][0]'
-  const params = {id: input._ref}
+  const params = { id: input._ref }
   return client.fetch(query, params).then(doc => {
     return doc.title
       .toLowerCase()
@@ -46,7 +46,7 @@ export default {
       name: 'landingPageRoute',
       type: 'reference',
       fieldset: 'interalLink',
-      to: [{type: 'route'}]
+      to: [{ type: 'route' }]
     },
     {
       name: 'slug',
@@ -104,7 +104,7 @@ export default {
       route: 'route',
       link: 'slug'
     },
-    prepare ({title, openInNewTab, slug, landingPage, link}) {
+    prepare({ title, openInNewTab, slug, landingPage, link }) {
       let subtitle = 'Not set'
       if (landingPage) {
         subtitle = `Route: /${landingPage}`

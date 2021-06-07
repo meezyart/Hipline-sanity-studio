@@ -1,4 +1,4 @@
-import {MdPerson} from 'react-icons/md'
+import { MdPerson } from 'react-icons/md'
 
 export default {
   name: 'socialSiteTwitter',
@@ -25,14 +25,10 @@ export default {
       url: 'twitterUrl',
       handle: 'twitterHandle'
     },
-    prepare ({url, handle}) {
+    prepare({ url, handle }) {
       return {
         title: 'Twitter',
-        subtitle: url
-          ? `Url: ${url}`
-          : null || handle
-            ? `Handle: /${handle}`
-            : 'Nothing Set'
+        subtitle: url ? `Url: ${url}` : null || handle ? `Handle: /${handle}` : 'Nothing Set'
       }
     }
   }

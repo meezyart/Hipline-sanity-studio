@@ -1,4 +1,4 @@
-import {MdPerson} from 'react-icons/md'
+import { MdPerson } from 'react-icons/md'
 
 export default {
   name: 'socialSiteYouTube',
@@ -25,14 +25,10 @@ export default {
       url: 'youTubeUrl',
       handle: 'youTubeHandle'
     },
-    prepare ({url, handle}) {
+    prepare({ url, handle }) {
       return {
         title: 'YouTube',
-        subtitle: url
-          ? `Url: ${url}`
-          : null || handle
-            ? `Handle: /${handle}`
-            : 'Nothing Set'
+        subtitle: url ? `Url: ${url}` : null || handle ? `Handle: /${handle}` : 'Nothing Set'
       }
     }
   }

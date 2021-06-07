@@ -1,5 +1,5 @@
-import {DateTime} from 'luxon'
-import {MdCreate} from 'react-icons/md'
+import { DateTime } from 'luxon'
+import { MdCreate } from 'react-icons/md'
 
 export default {
   name: 'article',
@@ -122,12 +122,10 @@ export default {
       media: 'featuredImage',
       description: 'excerpt'
     },
-    prepare ({title = 'No title', publishedAt, media, description}) {
+    prepare({ title = 'No title', publishedAt, media, description }) {
       return {
         title,
-        subtitle: publishedAt
-          ? DateTime.fromISO(publishedAt).toFormat('LLL dd, yyyy')
-          : '',
+        subtitle: publishedAt ? DateTime.fromISO(publishedAt).toFormat('LLL dd, yyyy') : '',
         media,
         description
       }
