@@ -1,51 +1,60 @@
 {
-  "root": true,
-  "project": {
-    "name": "Hipline CMS"
-  },
-  "api": {
-    "projectId": "00prkzk3",
-    "dataset": "production"
-  },
-  "plugins": [
-    "@sanity/base",
-    "@sanity/components",
-    "@sanity/default-layout",
-    "@sanity/default-login",
-    "@sanity/dashboard",
-    "@sanity/desk-tool",
-    "dashboard-widget-structure-menu",
-    "dashboard-widget-netlify",
-    "media",
-    "@sanity/google-maps-input"
-  ],
-  "env": {
-    "development": {
-      "plugins": [
-        "@sanity/vision"
-      ]
-    }
-  },
-  "parts": [
-    {
-      "name": "part:@sanity/base/schema",
-      "path": "./schemas/schema"
+    "root": true,
+    "project": {
+        "name": "Hipline CMS"
     },
-    {
-      "name": "part:@sanity/desk-tool/structure",
-      "path": "./parts/deskStructure.js"
+    "api": {
+        "projectId": "00prkzk3",
+        "dataset": "production"
     },
-    {
-      "implements": "part:@sanity/dashboard/config",
-      "path": "./parts/dashboardConfig.js"
+    "plugins": [
+        "@sanity/base",
+        "@sanity/components",
+        "@sanity/default-layout",
+        "@sanity/default-login",
+        "@sanity/dashboard",
+        "@sanity/desk-tool",
+        "dashboard-widget-structure-menu",
+        "dashboard-widget-netlify",
+        "media",
+        "@sanity/google-maps-input",
+        "note-field"
+    ],
+    "env": {
+        "development": {
+            "plugins": [
+                "@sanity/vision"
+            ]
+        }
     },
-    {
-      "name": "part:@sanity/base/new-document-structure",
-      "path": "./parts/newDocumentStructure.js"
-    },
-    {
-      "implements": "part:@sanity/base/theme/variables/override-style",
-      "path": "./styles/variables.css"
-    }
-  ]
+    "parts": [{
+            "name": "part:@sanity/base/schema",
+            "path": "./schemas/schema"
+        },
+        {
+            "name": "part:@sanity/desk-tool/structure",
+            "path": "./parts/deskStructure.js"
+        },
+        {
+            "implements": "part:@sanity/dashboard/config",
+            "path": "./parts/dashboardConfig.js"
+        },
+        {
+            "name": "part:@sanity/base/new-document-structure",
+            "path": "./parts/newDocumentStructure.js"
+        },
+
+        {
+            "implements": "part:@sanity/base/brand-logo",
+            "path": "./styles/logo.js"
+        },
+        {
+            "implements": "part:@sanity/base/theme/variables/override-style",
+            "path": "./styles/variables.css"
+        },
+        {
+            "implements": "part:@sanity/form-builder/input-resolver",
+            "path": "./parts/input-resolver.js"
+        }
+    ]
 }
