@@ -1,4 +1,4 @@
-import {MdAssignment} from 'react-icons/md'
+import { MdAssignment } from 'react-icons/md'
 
 export default {
   name: 'passBlock',

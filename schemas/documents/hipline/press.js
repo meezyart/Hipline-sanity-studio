@@ -1,4 +1,4 @@
-import {GoDeviceCamera} from 'react-icons/go'
+import { GoDeviceCamera } from 'react-icons/go'
 
 export default {
   name: 'press',
@@ -43,7 +43,7 @@ export default {
       title: 'Cover Video',
       description:
         'Select Recommended dimensions - 537 x 429, Filesize - less than 500 k(800 k max)',
-      of: [{type: 'file'}]
+      of: [{ type: 'file' }]
     },
     {
       name: 'classImages',
@@ -51,7 +51,7 @@ export default {
       title: 'Cover Images',
       description:
         'Select Recommended dimensions - 537 x 429, Filesizea\n - less than 500 k(800 k max)',
-      of: [{type: 'mainImage'}]
+      of: [{ type: 'mainImage' }]
     }
   ]
 }

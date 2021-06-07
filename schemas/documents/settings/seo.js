@@ -1,37 +1,61 @@
-import {MdBuild} from 'react-icons/md'
+import { MdBuild } from 'react-icons/md'
 
 export default {
+  title: 'Default SEO / Share',
   name: 'settingsSeo',
-  title: 'SEO',
   type: 'document',
   icon: MdBuild,
   fields: [
     {
-      name: 'siteName',
-      title: 'Site Name',
+      title: 'Site Title',
+      name: 'siteTitle',
       type: 'string',
-      description: 'Used in meta tags and page titles for SEO.'
+      description: 'The name of your site, usually your company/brand name.'
     },
     {
-      title: 'Open Graph (Seo)',
-      name: 'openGraph',
-      description:
-        'These will be the default meta tags on all pages that have not set their own',
-      type: 'openGraph'
+      title: 'Default Meta Title',
+      name: 'metaTitle',
+      type: 'string',
+      description: 'Title used for search engines and browsers.',
+      validation: Rule => Rule.max(50).warning('Longer titles may be truncated by search engines')
+    },
+    {
+      title: 'Default Meta Description',
+      name: 'metaDesc',
+      type: 'text',
+      rows: 3,
+      description: 'Description for search engines.',
+      validation: Rule =>
+        Rule.max(150).warning('Longer descriptions may be truncated by search engines')
+    },
+    {
+      title: 'Default Share Title',
+      name: 'shareTitle',
+      type: 'string',
+      description: 'TItle used for social sharing cards.',
+      validation: Rule => Rule.max(50).warning('Longer titles may be truncated by social sites')
+    },
+    {
+      title: 'Default Share Description',
+      name: 'shareDesc',
+      type: 'text',
+      rows: 3,
+      description: 'Description for social sharing cards.',
+      validation: Rule =>
+        Rule.max(150).warning('Longer descriptions may be truncated by social sites')
+    },
+    {
+      title: 'Default Share Graphic',
+      name: 'shareGraphic',
+      type: 'image',
+      description: 'Share graphics will be cropped to 1200x630'
     }
-    // {
-    //     name: 'siteDescription',
-    //     title: 'Site Description',
-    //     type: 'text',
-    //     description: 'Used as the default meta description when one is not specified on a page for SEO.',
-    //     rows: 4,
-    //     validation: Rule => Rule.max(150)
-    // },
-    // {
-    //     name: 'siteShareImage',
-    //     title: 'Site Share Image',
-    //     type: 'image',
-    //     description: 'Used as the default share image when one is not specified on a page. Recommended size: 1200x630px'
-    // }
-  ]
+  ],
+  preview: {
+    prepare() {
+      return {
+        title: 'Default SEO / Share'
+      }
+    }
+  }
 }
