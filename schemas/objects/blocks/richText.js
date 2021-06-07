@@ -1,4 +1,4 @@
-import {FiLink, FiExternalLink} from 'react-icons/fi'
+import { FiLink, FiExternalLink } from 'react-icons/fi'
 
 export default {
   name: 'richTextBlock',
@@ -67,12 +67,12 @@ export default {
               {
                 name: 'reference',
                 type: 'reference',
-                title: 'Reference',
-                to: [{type: 'article'}, {type: 'page'}]
+                title: '(A) Internal Page',
+                to: [{ type: 'article' }, { type: 'page' }]
               },
               {
-                title: 'Link button?',
-                name: 'linkButton',
+                title: 'Style as Button?',
+                name: 'isButton',
                 type: 'boolean'
               }
             ]
@@ -80,7 +80,7 @@ export default {
           {
             name: 'link',
             type: 'object',
-            title: 'Link',
+            title: '(B) External URL',
             blockEditor: {
               icon: FiExternalLink
             },
@@ -92,8 +92,8 @@ export default {
                 description: 'This link will open in a new tab.'
               },
               {
-                title: 'Link button?',
-                name: 'linkButton',
+                title: 'Style as Button?',
+                name: 'isButton',
                 type: 'boolean'
               }
             ]

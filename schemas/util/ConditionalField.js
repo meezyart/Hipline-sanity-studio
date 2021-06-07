@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import {FormBuilderInput, withDocument} from 'part:@sanity/form-builder'
+import { FormBuilderInput, withDocument } from 'part:@sanity/form-builder'
 
 const defaultCondition = () => true
 
@@ -21,30 +21,20 @@ class ConditionalField extends React.Component {
 
   _inputElement = React.createRef()
 
-  focus () {
+  focus() {
     if (this._inputElement.current) {
       this._inputElement.current.focus()
     }
   }
 
-  render () {
-    const {
-      document,
-      value,
-      level,
-      focusPath,
-      onFocus,
-      onBlur,
-      onChange
-    } = this.props
+  render() {
+    const { document, value, level, focusPath, onFocus, onBlur, onChange } = this.props
 
-    const {inputComponent, ...type} = this.props.type
-    const condition =
-      (type.options && type.options.condition) || defaultCondition
+    const { inputComponent, ...type } = this.props.type
+    const condition = (type.options && type.options.condition) || defaultCondition
 
-    return condition(document)
-      ? (
-      <div style={{marginBottom: 20}}>
+    return condition(document) ? (
+      <div style={{ marginBottom: 20 }}>
         <FormBuilderInput
           level={level}
           ref={this._inputElement}
@@ -57,8 +47,7 @@ class ConditionalField extends React.Component {
           onBlur={onBlur}
         />
       </div>
-        )
-      : null
+    ) : null
   }
 }
 

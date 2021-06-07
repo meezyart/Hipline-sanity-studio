@@ -2,27 +2,47 @@ export default {
   title: 'Open Graph (Seo)',
   name: 'openGraph',
   type: 'object',
+  options: {
+    collapsible: true
+  },
   fields: [
     {
-      title: 'Title',
-      name: 'title',
+      title: 'Meta Title',
+      name: 'metaTitle',
       type: 'string',
-      description: 'Heads up! This will override the page title.',
-      validation: Rule => Rule.max(60).warning('Should be under 60 characters')
+      description: 'Title used for search engines and browsers.',
+      validation: Rule => Rule.max(50).warning('Longer titles may be truncated by search engines')
     },
     {
-      title: 'Description',
-      name: 'description',
+      title: 'Meta Description',
+      name: 'metaDesc',
       type: 'text',
-      rows: 4,
+      rows: 3,
+      description: 'Description for search engines.',
       validation: Rule =>
-        Rule.max(155).warning('Should be under 155 characters')
+        Rule.max(150).warning('Longer descriptions may be truncated by search engines')
     },
     {
-      title: 'Image',
-      description: 'Facebook recommends 1200x630 (will be auto resized)',
-      name: 'image',
-      type: 'mainImage'
+      title: 'Share Title',
+      name: 'shareTitle',
+      type: 'string',
+      description: 'TItle used for social sharing cards.',
+      validation: Rule => Rule.max(50).warning('Longer titles may be truncated by social sites')
+    },
+    {
+      title: 'Share Description',
+      name: 'shareDesc',
+      type: 'text',
+      rows: 3,
+      description: 'Description for social sharing cards.',
+      validation: Rule =>
+        Rule.max(150).warning('Longer descriptions may be truncated by social sites')
+    },
+    {
+      title: 'Share Graphic',
+      name: 'shareGraphic',
+      type: 'image',
+      description: 'Share graphics will be cropped to 1200x630'
     },
     {
       title: 'Keywords',
@@ -30,20 +50,17 @@ export default {
       name: 'keywords',
       type: 'array',
       rows: 3,
-      of: [{type: 'string'}],
+      of: [{ type: 'string' }],
       options: {
         layout: 'tags'
       },
       validation: Rule => Rule.unique()
-    }
-    /*
-                            // You can add videos to Open Graph tags too
-                            {
-                              name: 'video',
-                              title: 'Video',
-                              type: 'mux.video'
-                            }
-                            */
+    } // You can add videos to Open Graph tags too
+    // {
+    //     name: 'video',
+    //     title: 'Video',
+    //     type: 'mux.video'
+    // }
   ],
   preview: {
     select: {
@@ -51,14 +68,10 @@ export default {
       route: 'route.slug.current',
       link: 'link'
     },
-    prepare ({title, route, link}) {
+    prepare({ title, route, link }) {
       return {
         title,
-        subtitle: route
-          ? `Route: /${route}/`
-          : link
-            ? `External link: ${link}`
-            : 'Not set'
+        subtitle: route ? `Route: /${route}/` : link ? `External link: ${link}` : 'Not set'
       }
     }
   }
