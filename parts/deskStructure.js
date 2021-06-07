@@ -18,6 +18,7 @@ import {
     MdPeople,
     MdShowChart
 } from 'react-icons/md'
+// import SeoPreview from '../schemas/components/preview/seo-preview'
 
 import { GoBrowser as PageIcon, GoHome, GoSettings } from 'react-icons/go'
 
@@ -85,9 +86,9 @@ S.list()
                 S.documentTypeListItem('passBlock')
                 .title('All Passes')
                 .icon(MdCollectionsBookmark),
-                S.documentTypeListItem('passCategory')
-                .title('Pass Sections/Catergory')
-                .icon(MdApps)
+                // S.documentTypeListItem('passCategory')
+                // .title('Pass Sections/Catergory')
+                // .icon(MdApps)
             ])
         ),
         S.listItem()
@@ -110,9 +111,7 @@ S.list()
                         S.documentList()
                         .schemaType('article')
                         .title('Articles')
-                        .filter(
-                            '_type == "article" && $catId in categories[]._ref'
-                        )
+                        .filter('_type == "article" && $catId in categories[]._ref')
                         .params({
                             catId
                         })
@@ -166,23 +165,11 @@ S.list()
             .title('Landing Pages')
             .items([
                 S.listItem()
-                .title('Navigation Menus')
+                .title('Menus')
                 .icon(MdMenu)
                 .schemaType('menu')
                 .child(S.documentTypeList('menu').title('Navigation Menus')),
-                S.listItem()
-                .title('Page Routes')
-                .schemaType('route')
-                .child(
-                    S.documentTypeList('route')
-                    .title('Page Routes')
-                    .child(documentId =>
-                        S.document()
-                        .documentId(documentId)
-                        .schemaType('route')
-                        .views([S.view.form()])
-                    )
-                ),
+
                 S.listItem()
                 .title('Pages')
                 .schemaType('page')
@@ -249,6 +236,15 @@ S.list()
                 ),
                 S.listItem()
                 .title('Site Announcements')
+                .icon(MdHearing)
+                .child(
+                    S.document()
+                    .title('Site Announcements')
+                    .schemaType('settingsAnnouncements')
+                    .documentId('settingsAnnouncements')
+                ),
+                S.listItem()
+                .title('Cookie Constent')
                 .icon(MdHearing)
                 .child(
                     S.document()
