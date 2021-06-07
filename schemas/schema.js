@@ -42,7 +42,12 @@ import link from './objects/blocks/link'
 
 import mainImage from './objects/blocks/mainImage'
 import openGraph from './objects/blocks/openGraph'
+import fileAsset from './objects/blocks/fileAsset'
 import simpleSection from './objects/blocks/simpleSection'
+import navLink from './objects/blocks/navLink'
+import navPage from './objects/blocks/navPage'
+import navSlug from './objects/blocks/navSlug'
+import navDropDown from './objects/blocks/navDropdown'
 import faqSection from './objects/sections/faq'
 import richTextSection from './objects/sections/richText'
 import latestArticlesSection from './objects/sections/latestArticles'
@@ -53,52 +58,57 @@ import socialSiteInstagram from './objects/settings/instagram'
 import socialSiteYouTube from './objects/settings/youtube'
 
 export default createSchema({
-    name: 'default',
-    types: schemaTypes.concat([
-        /* Documents */
-        page,
-        sectionsHeader,
-        sectionsFooter,
-        menu,
-        route,
-        settingsSeo,
-        settingsFavicons,
-        settingsSocial,
-        settingsAnalytics,
-        settingsContactInfo,
-        settingsAnnouncements,
-        settingsLogo,
-        choreographers,
-        classMenu,
-        article,
-        articleCategory,
-        classPass,
-        passBlock,
-        passCategory,
-        /* Objects */
-        // bioPortableText,
-        // bodyPortableText,
-        link,
-        simpleBlockContent,
-        excerptPortableText,
-        // instagram,
-        // videoEmbed,
-        openGraph,
-        richTextBlock,
-        // imageBlock,
-        youtubeBlock,
-        vimeoBlock,
-        socialBlock,
-        simpleSection,
-        richTextSection,
-        faqSection,
-        latestArticlesSection,
-        menuItem,
-        cta,
-        mainImage,
-        socialSiteFacebook,
-        socialSiteTwitter,
-        socialSiteInstagram,
-        socialSiteYouTube
-    ])
+  name: 'default',
+  types: schemaTypes.concat([
+    /* Documents */
+    page,
+    sectionsHeader,
+    sectionsFooter,
+    menu,
+    route,
+    settingsSeo,
+    settingsFavicons,
+    settingsSocial,
+    settingsAnalytics,
+    settingsContactInfo,
+    settingsAnnouncements,
+    settingsLogo,
+    choreographers,
+    classMenu,
+    article,
+    articleCategory,
+    classPass,
+    passBlock,
+    passCategory,
+    /* Objects */
+    // bioPortableText,
+    // bodyPortableText,
+    link,
+    navLink,
+    navPage,
+    navSlug,
+    navDropDown,
+    simpleBlockContent,
+    excerptPortableText,
+    // instagram,
+    // videoEmbed,
+    openGraph,
+    richTextBlock,
+    // imageBlock,
+    youtubeBlock,
+    vimeoBlock,
+    socialBlock,
+    simpleSection,
+    richTextSection,
+    faqSection,
+    latestArticlesSection,
+    menuItem,
+    fileAsset,
+    cta,
+    mainImage,
+    socialSiteFacebook,
+    socialSiteTwitter,
+    socialSiteInstagram,
+    socialSiteYouTube
+  ])
 })

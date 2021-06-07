@@ -1,4 +1,4 @@
-import {MdMenu} from 'react-icons/md'
+import { MdMenu } from 'react-icons/md'
 
 export default {
   name: 'menu',
@@ -18,7 +18,16 @@ export default {
       type: 'array',
       of: [
         {
-          type: 'cta'
+          type: 'navPage'
+        },
+        {
+          type: 'navLink'
+        },
+        {
+          type: 'navSlug'
+        },
+        {
+          type: 'navDropDown'
         }
       ]
     }

@@ -1,10 +1,19 @@
-import {MdDescription} from 'react-icons/md'
+import { MdDescription } from 'react-icons/md'
 
 export default {
   name: 'page',
   title: 'Page',
   type: 'document',
   icon: MdDescription,
+  fieldsets: [
+    {
+      title: 'Visibility',
+      name: 'visibility',
+      options: {
+        collapsible: true
+      }
+    }
+  ],
   fields: [
     {
       name: 'title',
@@ -20,19 +29,31 @@ export default {
     //     to: [{ type: 'menu' }],
     //     description: 'Which nav menu should be shown, if any',
     // },
-    // {
-    //     name: 'slug',
-    //     title: 'Slug',
-    //     type: 'slug',
-    //     options: {
-    //         source: 'title',
-    //         maxLength: 96
-    //     },
-    //     description: 'Used to determine the path of the page.',
-    //     validation: Rule => Rule.custom(slug => {
-    //         return slug.current === 'articles' ? 'A page has already been set with this slug.' : true
-    //     })
-    // },
+    {
+      name: 'slug',
+      title: 'URL Slug',
+      type: 'slug',
+      description: '(required)',
+      options: {
+        source: 'title',
+        maxLength: 96
+      },
+      description: 'Used to determine the path of the page.',
+      validation: Rule =>
+        Rule.custom(slug => {
+          if (slug && slug.current && slug.current === '/') {
+            return 'Cannot be /'
+          }
+          return true
+        })
+    },
+    {
+      title: 'Use site title?',
+      description:
+        'Use the site settings title as page title instead of the title on the referenced page',
+      name: 'useSiteTitle',
+      type: 'boolean'
+    },
     {
       name: 'pageSections',
       title: 'Page Sections',
@@ -50,6 +71,26 @@ export default {
           type: 'faqSection'
         }
       ]
+    },
+    {
+      title: 'SEO / Share Settings',
+      name: 'openGraph',
+      description: 'These values populate meta tags',
+      type: 'openGraph'
+    },
+    {
+      title: 'Include in sitemap',
+      description: 'For search engines. Will be generateed to /sitemap.xml',
+      name: 'includeInSitemap',
+      type: 'boolean',
+      fieldset: 'visibility'
+    },
+    {
+      title: 'Disallow in robots.txt',
+      description: 'Hide this route for search engines like google',
+      name: 'disallowRobots',
+      type: 'boolean',
+      fieldset: 'visibility'
     }
     // {
     //     name: 'linkChoice',
@@ -57,5 +98,18 @@ export default {
     //     type: 'link',
     //     // description: 'testing links'
     // }
-  ]
+  ],
+  preview: {
+    select: {
+      title: 'title',
+      slug: 'slug'
+    },
+    prepare({ title = 'Untitled', slug = {} }) {
+      const path = `/${slug.current}`
+      return {
+        title,
+        subtitle: slug.current ? path : '(missing slug)'
+      }
+    }
+  }
 }
