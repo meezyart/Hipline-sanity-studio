@@ -68,24 +68,20 @@ S.list()
                 S.documentTypeListItem('passesMenu')
                 .title('Passes Sections')
                 .icon(MdCollectionsBookmark),
-                // .child(
-                //     S.documentTypeList('passCategory')
-                //     .title('Passes By Section')
-                //     .child(catId =>
-                //         S.documentList()
-                //         .schemaType('passesMenu')
-                //         .title('Passes')
-                //         .filter(
-                //             '_type == "passBlock" && $catId in passCategory[]._ref'
-                //         )
-                //         .params({
-                //             catId
-                //         })
-                //     )
-                // ),
+
                 S.documentTypeListItem('passBlock')
-                .title('All Passes')
+                .title('Passes')
                 .icon(MdCollectionsBookmark),
+                // S.listItem()
+                // .title('All Passes')
+                // .icon(MdCollectionsBookmark)
+                // .child(
+                //     S.documentList('passesMenu')
+                //     .schemaType('passesMenu')
+                //     .title('Passes')
+                //     .menuItems(S.documentTypeList('passesMenu').getMenuItems())
+                //     .filter('_type == "passBlock"')
+                // )
                 // S.documentTypeListItem('passCategory')
                 // .title('Pass Sections/Catergory')
                 // .icon(MdApps)
