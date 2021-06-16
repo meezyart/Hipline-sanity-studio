@@ -1,3 +1,5 @@
+import { FiLink, FiExternalLink } from 'react-icons/fi'
+
 export default {
     name: 'excerptPortableText',
     type: 'array',
@@ -67,7 +69,8 @@ export default {
                             name: 'href',
                             type: 'url',
                             title: 'URL',
-                            description: 'This link will open in a new tab.'
+                            description: 'This link will open in a new tab.',
+                            validation: Rule => Rule.uri({ scheme: ['tel', 'mailto', 'http', 'https'] })
                         },
                         {
                             title: 'Style as Button?',
