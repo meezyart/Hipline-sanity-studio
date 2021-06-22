@@ -30,6 +30,7 @@ import richTextBlock from './objects/blocks/richText'
 import youtubeBlock from './objects/blocks/youtube'
 import vimeoBlock from './objects/blocks/vimeo'
 import socialBlock from './objects/blocks/socialBlock'
+import iconBlock from './objects/blocks/icons'
 import cta from './objects/cta'
 
 import simpleBlockContent from './objects/blocks/simpleBlockContent'
@@ -49,7 +50,9 @@ import navPage from './objects/blocks/navPage'
 import navSlug from './objects/blocks/navSlug'
 import navDropDown from './objects/blocks/navDropdown'
 import faqSection from './objects/sections/faq'
+import picContentSection from './objects/sections/picContent'
 import richTextSection from './objects/sections/richText'
+import testimonialSection from './objects/sections/testimonials'
 import latestArticlesSection from './objects/sections/latestArticles'
 import menuItem from './objects/menuItem'
 import socialSiteFacebook from './objects/settings/facebook'
@@ -79,6 +82,9 @@ export default createSchema({
         articleCategory,
         passMenu,
         passBlock,
+        picContentSection,
+        testimonialSection,
+        iconBlock,
         // passCategory,
         /* Objects */
         // bioPortableText,
