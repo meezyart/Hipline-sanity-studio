@@ -1,5 +1,5 @@
 import React from 'react'
-import ConditionalFields from '../../util/conditional-Field'
+import ConditionalFields from '../../util/conditional-field'
 
 export default {
     name: 'picContentSection',
