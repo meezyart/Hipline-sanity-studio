@@ -1,7 +1,5 @@
 {
     "types": [{
-        "type": "article",
-        "field": "publishedAt",
-        "titleField": "title"
+
     }]
 }

@@ -1,9 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import Fieldset from 'part:@sanity/components/fieldsets/default'
 import { setIfMissing } from 'part:@sanity/form-builder/patch-event'
 import { FormBuilderInput, withDocument, withValuePath } from 'part:@sanity/form-builder'
-import fieldStyle from '@sanity/form-builder/lib/inputs/ObjectInput/styles/Field.css'
 
 const isFunction = obj => !!(obj && obj.constructor && obj.call && obj.apply)
 
