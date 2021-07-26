@@ -10,6 +10,7 @@ import classMenu from './documents/hipline/classMenu'
 import passMenu from './documents/hipline/passMenu'
 // import passCategory from './documents/hipline/passCategory'
 import passBlock from './documents/hipline/pass'
+import loveClubBlock from './documents/hipline/loveClub'
 import article from './documents/articles/article'
 import articleCategory from './documents/articles/category'
 import sectionsHeader from './documents/sections/header'
@@ -54,6 +55,10 @@ import picContentSection from './objects/sections/picContent'
 import richTextSection from './objects/sections/richText'
 import testimonialSection from './objects/sections/testimonials'
 import latestArticlesSection from './objects/sections/latestArticles'
+import classMenuSection from './objects/hipline/classMenu'
+import classPassSection from './objects/hipline/classPass'
+import classScheduleSection from './objects/hipline/classSchedule'
+import loveClubSection from './objects/hipline/loveClub'
 import menuItem from './objects/menuItem'
 import socialSiteFacebook from './objects/settings/facebook'
 import socialSiteTwitter from './objects/settings/twitter'
@@ -80,10 +85,15 @@ export default createSchema({
         classMenu,
         article,
         articleCategory,
-        passMenu,
+        // passMenu,
         passBlock,
+        loveClubBlock,
         picContentSection,
         testimonialSection,
+        classMenuSection,
+        classPassSection,
+        classScheduleSection,
+        loveClubSection,
         iconBlock,
         // passCategory,
         /* Objects */

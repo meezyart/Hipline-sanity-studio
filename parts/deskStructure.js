@@ -33,7 +33,7 @@ const hiddenDocTypes = listItem =>
         'route',
         'pressCategory',
         'passesMenu',
-        'passBlock',
+        // 'passBlock',
         'passCategory',
         'sectionsHeader',
         'sectionsFooter',
@@ -58,35 +58,35 @@ S.list()
         .icon(MdDescription),
         // Imcoming
         ...S.documentTypeListItems().filter(hiddenDocTypes),
-        S.listItem()
-        .title('Passes')
-        .icon(MdNextWeek)
-        .child(
-            S.list()
-            .title('Passes Sections')
-            .items([
-                S.documentTypeListItem('passesMenu')
-                .title('Passes Sections')
-                .icon(MdCollectionsBookmark),
+        // S.listItem()
+        // .title('Passes')
+        // .icon(MdNextWeek)
+        // .child(
+        //     S.list()
+        //     .title('Passes Sections')
+        //     .items([
+        //         S.documentTypeListItem('passesMenu')
+        //         .title('Passes Sections')
+        //         .icon(MdCollectionsBookmark),
 
-                S.documentTypeListItem('passBlock')
-                .title('Passes')
-                .icon(MdCollectionsBookmark),
-                // S.listItem()
-                // .title('All Passes')
-                // .icon(MdCollectionsBookmark)
-                // .child(
-                //     S.documentList('passesMenu')
-                //     .schemaType('passesMenu')
-                //     .title('Passes')
-                //     .menuItems(S.documentTypeList('passesMenu').getMenuItems())
-                //     .filter('_type == "passBlock"')
-                // )
-                // S.documentTypeListItem('passCategory')
-                // .title('Pass Sections/Catergory')
-                // .icon(MdApps)
-            ])
-        ),
+        //         S.documentTypeListItem('passBlock')
+        //         .title('Passes')
+        //         .icon(MdCollectionsBookmark),
+        //         // S.listItem()
+        //         // .title('All Passes')
+        //         // .icon(MdCollectionsBookmark)
+        //         // .child(
+        //         //     S.documentList('passesMenu')
+        //         //     .schemaType('passesMenu')
+        //         //     .title('Passes')
+        //         //     .menuItems(S.documentTypeList('passesMenu').getMenuItems())
+        //         //     .filter('_type == "passBlock"')
+        //         // )
+        //         // S.documentTypeListItem('passCategory')
+        //         // .title('Pass Sections/Catergory')
+        //         // .icon(MdApps)
+        //     ])
+        // ),
         S.listItem()
         .title('Press')
         .icon(MdRssFeed)

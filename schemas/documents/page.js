@@ -7,10 +7,10 @@ export default {
     icon: MdDescription,
     fieldsets: [{
         title: 'Visibility',
-        name: 'visibility',
-        options: {
-            collapsible: true
-        }
+        name: 'visibility'
+            // options: {
+            //     collapsible: true
+            // }
     }],
     fields: [{
             name: 'title',
@@ -57,14 +57,30 @@ export default {
             type: 'array',
             // Insert page sections here
             of: [{
-                type: 'richTextSection'
-            }, {
-                type: 'picContentSection'
-            }, {
-                type: 'faqSection'
-            }, {
-                type: 'testimonialSection'
-            }]
+                    type: 'richTextSection'
+                },
+                {
+                    type: 'picContentSection'
+                },
+                {
+                    type: 'faqSection'
+                },
+                {
+                    type: 'testimonialSection'
+                },
+                {
+                    type: 'classMenuSection'
+                },
+                {
+                    type: 'classPassSection'
+                },
+                {
+                    type: 'classScheduleSection'
+                },
+                {
+                    type: 'loveClubSection'
+                }
+            ]
         },
         {
             title: 'SEO / Share Settings',
@@ -74,9 +90,10 @@ export default {
         },
         {
             title: 'Include in sitemap',
-            description: 'For search engines. Will be generateed to /sitemap.xml',
+            description: 'For search engines. Will be generated to /sitemap.xml',
             name: 'includeInSitemap',
             type: 'boolean',
+            initialValue: true,
             fieldset: 'visibility'
         },
         {
@@ -93,6 +110,9 @@ export default {
         //     // description: 'testing links'
         // }
     ],
+    initialValue: {
+        includeInSitemap: true
+    },
     preview: {
         select: {
             title: 'title',
