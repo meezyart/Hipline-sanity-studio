@@ -32,6 +32,7 @@ import youtubeBlock from './objects/blocks/youtube'
 import vimeoBlock from './objects/blocks/vimeo'
 import socialBlock from './objects/blocks/socialBlock'
 import iconBlock from './objects/blocks/icons'
+import contactBlock from './objects/blocks/contact'
 import cta from './objects/cta'
 
 import simpleBlockContent from './objects/blocks/simpleBlockContent'
@@ -87,6 +88,7 @@ export default createSchema({
         articleCategory,
         // passMenu,
         passBlock,
+        contactBlock,
         loveClubBlock,
         picContentSection,
         testimonialSection,
