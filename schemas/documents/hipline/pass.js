@@ -75,8 +75,12 @@ export default {
         {
             name: 'passLink',
             title: 'Mind Body Link',
-            description: 'Use the External Link for this',
-            type: 'cta'
+            description: 'Use the External Link for this (optional)',
+            type: 'cta',
+            options: {
+                collapsible: true, // Makes the whole fieldset collapsible
+                collapsed: true, // Defines if the fieldset should be collapsed by default or not
+            },
         }
     ]
 }
