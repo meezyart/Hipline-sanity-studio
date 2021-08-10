@@ -14,17 +14,36 @@ export default {
             type: 'string',
             validation: Rule => Rule.required()
         },
-        // {
-        //     name: 'classPassSections',
-        //     type: 'array',
-        //     title: 'Class Pass Sections',
-        //     description: 'Select the Class Pass to be included in this section',
-        //     of: [{
-        //         title: 'Class Pass Sections',
-        //         type: 'reference',
-        //         to: [{ type: 'classPass' }]
-        //     }]
-        // },
+        {
+            description: 'Pick a for this theme',
+            name: 'passColor',
+            title: 'Theme Color',
+            type: 'colorlist', // required
+            options: {
+                borderradius: {
+                    outer: '100%',
+                    inner: '100%'
+                },
+                list: [{
+                        title: 'purple',
+                        value: '#968dff'
+                    },
+                    {
+                        title: 'blue',
+                        value: '#a8ddfb'
+                    },
+
+                    {
+                        title: 'ceren-orange',
+                        value: '#fbaa62'
+                    },
+                    {
+                        title: 'pink-prime',
+                        value: '#F1A2B8'
+                    }
+                ]
+            }
+        },
 
         {
             name: 'passIntro',

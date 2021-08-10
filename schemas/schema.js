@@ -7,8 +7,6 @@ import page from './documents/page'
 // hipline
 import choreographers from './documents/hipline/choreographers'
 import classMenu from './documents/hipline/classMenu'
-import passMenu from './documents/hipline/passMenu'
-// import passCategory from './documents/hipline/passCategory'
 import passBlock from './documents/hipline/pass'
 import loveClubBlock from './documents/hipline/loveClub'
 import article from './documents/articles/article'
@@ -33,6 +31,7 @@ import vimeoBlock from './objects/blocks/vimeo'
 import socialBlock from './objects/blocks/socialBlock'
 import iconBlock from './objects/blocks/icons'
 import contactBlock from './objects/blocks/contact'
+import testimonialBlock from './objects/blocks/testimonial'
 import cta from './objects/cta'
 
 import simpleBlockContent from './objects/blocks/simpleBlockContent'
@@ -90,6 +89,7 @@ export default createSchema({
         passBlock,
         contactBlock,
         loveClubBlock,
+        testimonialBlock,
         picContentSection,
         testimonialSection,
         classMenuSection,

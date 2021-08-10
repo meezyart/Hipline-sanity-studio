@@ -62,6 +62,7 @@ export default {
                     name: 'link',
                     type: 'object',
                     title: '(B) External URL',
+
                     blockEditor: {
                         icon: FiExternalLink
                     },
@@ -69,7 +70,7 @@ export default {
                             name: 'href',
                             type: 'url',
                             title: 'URL',
-                            description: 'This link will open in a new tab.',
+                            description: 'This link will open in a new tab. For email addresses use mailto:youremail@email.com',
                             validation: Rule => Rule.uri({ scheme: ['tel', 'mailto', 'http', 'https'] })
                         },
                         {

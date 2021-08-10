@@ -24,22 +24,15 @@ export default {
                 ],
                 layout: 'radio'
             }
-        }, {
-            name: 'author',
-            title: 'Author',
-            type: 'string'
-                // description: 'Used as the main heading of this section. use span to change the color of text headline <span>hightlight</span>'
         },
         {
-            name: 'content',
-            title: 'Testimonial Content',
-            type: 'simpleSection'
-        },
-
-        {
-            name: 'authorImage',
-            title: 'Author Image',
-            type: 'mainImage'
+            name: 'testimonials',
+            title: 'Testimonials Blocks',
+            type: 'array',
+            description: 'Add your Testimonies here',
+            of: [{
+                type: 'testimonialBlock'
+            }]
         }
     ],
     preview: {
