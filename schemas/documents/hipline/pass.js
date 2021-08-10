@@ -48,7 +48,7 @@ export default {
             fields: [{
                     name: 'dataId',
                     title: 'Data Service id',
-                    description: 'Look for data-service-id="166":" ',
+                    description: 'Look for data-service-id="166" ',
                     type: 'number'
                 },
                 {
