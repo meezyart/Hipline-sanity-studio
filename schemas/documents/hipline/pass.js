@@ -47,14 +47,14 @@ export default {
             type: 'object',
             fields: [{
                     name: 'dataId',
-                    title: 'Data id',
-                    description: 'Look for prodId=166 at the end of the URL',
+                    title: 'Data Service id',
+                    description: 'Look for data-service-id="166":" ',
                     type: 'number'
                 },
                 {
                     name: 'dataType',
-                    title: 'DataType',
-                    description: 'Look for prodId=166 at the end of the URL',
+                    title: 'Data Type',
+                    description: 'Look for data-type="pricing-link" ',
                     type: 'string'
                 },
                 {
