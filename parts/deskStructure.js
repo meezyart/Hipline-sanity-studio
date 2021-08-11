@@ -154,29 +154,34 @@ S.list()
             ])
         ),
         S.listItem()
-        .title('Page Builder')
-        .icon(MdDescription)
-        .child(
-            S.list()
-            .title('Landing Pages')
-            .items([
-                S.listItem()
-                .title('Menus')
-                .icon(MdMenu)
-                .schemaType('menu')
-                .child(S.documentTypeList('menu').title('Navigation Menus')),
+        .title('Menus')
+        .icon(MdMenu)
+        .schemaType('menu')
+        .child(S.documentTypeList('menu').title('Navigation Menus')),
+        // S.listItem()
+        // .title('Page Builder')
+        // .icon(MdDescription)
+        // .child(
+        //     S.list()
+        //     .title('Landing Pages')
+        //     .items([
+        //         S.listItem()
+        //         .title('Menus')
+        //         .icon(MdMenu)
+        //         .schemaType('menu')
+        //         .child(S.documentTypeList('menu').title('Navigation Menus')),
 
-                S.listItem()
-                .title('Pages')
-                .schemaType('page')
-                .child(
-                    S.documentList('page')
-                    .title('Pages')
-                    .menuItems(S.documentTypeList('page').getMenuItems())
-                    .filter('_type == "page"')
-                )
-            ])
-        ),
+        //         S.listItem()
+        //         .title('Pages')
+        //         .schemaType('page')
+        //         .child(
+        //             S.documentList('page')
+        //             .title('Pages')
+        //             .menuItems(S.documentTypeList('page').getMenuItems())
+        //             .filter('_type == "page"')
+        //         )
+        //     ])
+        // ),
 
         S.listItem()
         .title('Site Settings')
