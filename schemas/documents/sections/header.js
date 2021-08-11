@@ -23,6 +23,11 @@ export default {
                 title: 'Show Login Button',
                 description: '',
                 type: 'boolean'
+            }, {
+                name: 'showCart',
+                title: 'Show Cart Button',
+                description: '',
+                type: 'boolean'
             }]
         },
         {
