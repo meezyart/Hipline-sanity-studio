@@ -21,7 +21,7 @@ export default {
         {
             name: 'passPrice',
             title: 'Pass Price',
-            description: 'Price for this Pass, Enter 0 you will se the heart symbol',
+            description: 'Price for this Pass, Enter 0 you will see the heart symbol',
             type: 'number'
         },
         {
@@ -82,5 +82,17 @@ export default {
                 collapsed: true, // Defines if the fieldset should be collapsed by default or not
             },
         }
-    ]
+    ],
+    preview: {
+        select: {
+            title: 'passName',
+            price: 'passPrice',
+            disabled: 'disabled'
+        },
+        prepare({ title, price, disabled }) {
+            return {
+                title: `${disabled ? 'DISABLED: ' : ''}${  title +  ' - $'+ price}`
+            }
+        }
+    }
 }

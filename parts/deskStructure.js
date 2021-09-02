@@ -37,6 +37,7 @@ const hiddenDocTypes = listItem =>
         'passCategory',
         'sectionsHeader',
         'sectionsFooter',
+        'sectionsMobile',
         'divider',
         'settingsSeo',
         'article',
@@ -56,7 +57,7 @@ S.list()
         S.documentTypeListItem('page')
         .title('Pages')
         .icon(MdDescription),
-        // Imcoming
+        // Incoming
         ...S.documentTypeListItems().filter(hiddenDocTypes),
         // S.listItem()
         // .title('Passes')
@@ -150,6 +151,15 @@ S.list()
                     .title('Footer')
                     .schemaType('sectionsFooter')
                     .documentId('sectionsFooter')
+                ),
+                S.listItem()
+                .title('Mobile')
+                .icon(MdViewAgenda)
+                .child(
+                    S.document()
+                    .title('Mobile')
+                    .schemaType('sectionsMobile')
+                    .documentId('sectionsMobile')
                 )
             ])
         ),
@@ -244,15 +254,15 @@ S.list()
                     .schemaType('settingsAnnouncements')
                     .documentId('settingsAnnouncements')
                 ),
-                S.listItem()
-                .title('Cookie Constent')
-                .icon(MdHearing)
-                .child(
-                    S.document()
-                    .title('Site Announcements')
-                    .schemaType('settingsAnnouncements')
-                    .documentId('settingsAnnouncements')
-                ),
+                // S.listItem()
+                // .title('Cookie Constent')
+                // .icon(MdHearing)
+                // .child(
+                //     S.document()
+                //     .title('Cookie Constent')
+                //     .schemaType('settingsCookie')
+                //     .documentId('settingsCookie')
+                // ),
                 S.listItem()
                 .title('Site Logo')
                 .icon(MdDonutSmall)

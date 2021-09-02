@@ -22,5 +22,17 @@ export default {
             type: 'array',
             of: [{ type: 'navPage' }, { type: 'navLink' }, { type: 'navSlug' }]
         }
-    ]
+    ],
+    preview: {
+        select: {
+            title: 'title',
+            page: 'page',
+        },
+        prepare({ title, page }) {
+            return {
+                title: `${'Dropdown Item: ' + title  ||
+          'Dropdown Item'}`
+            }
+        }
+    }
 }

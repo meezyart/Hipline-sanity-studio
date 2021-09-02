@@ -41,8 +41,9 @@ export default {
             disabled: 'disabled'
         },
         prepare({ title, disabled }) {
+
             return {
-                title: `${disabled ? 'DISABLED: ' : ''} ${title || 'Pic Content'}`
+                title: `${disabled ? 'DISABLED: ' : ''} ${title ? 'Testimonials Section: ' + title : 'Testimonials Section'}`
             }
         }
     }

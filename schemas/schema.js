@@ -13,6 +13,7 @@ import article from './documents/articles/article'
 import articleCategory from './documents/articles/category'
 import sectionsHeader from './documents/sections/header'
 import sectionsFooter from './documents/sections/footer'
+import sectionsMobile from './documents/sections/mobile'
 import menu from './documents/menu'
 import route from './documents/route'
 import settingsSeo from './documents/settings/seo'
@@ -49,14 +50,18 @@ import simpleSection from './objects/blocks/simpleSection'
 import navLink from './objects/blocks/navLink'
 import navPage from './objects/blocks/navPage'
 import navSlug from './objects/blocks/navSlug'
+import timelineBlock from './objects/blocks/timelineBlock'
 import navDropDown from './objects/blocks/navDropdown'
 import faqSection from './objects/sections/faq'
 import picContentSection from './objects/sections/picContent'
 import richTextSection from './objects/sections/richText'
 import testimonialSection from './objects/sections/testimonials'
 import latestArticlesSection from './objects/sections/latestArticles'
+import heroSection from './objects/sections/heroBanner'
 import classMenuSection from './objects/hipline/classMenu'
+import pageTitleSection from './objects/hipline/pageTitle'
 import classPassSection from './objects/hipline/classPass'
+import timelineSection from './objects/hipline/timeline'
 import classScheduleSection from './objects/hipline/classSchedule'
 import loveClubSection from './objects/hipline/loveClub'
 import menuItem from './objects/menuItem'
@@ -72,6 +77,7 @@ export default createSchema({
         page,
         sectionsHeader,
         sectionsFooter,
+        sectionsMobile,
         menu,
         route,
         settingsSeo,
@@ -92,7 +98,10 @@ export default createSchema({
         testimonialBlock,
         picContentSection,
         testimonialSection,
+        timelineSection,
+        pageTitleSection,
         classMenuSection,
+        heroSection,
         classPassSection,
         classScheduleSection,
         loveClubSection,
@@ -119,6 +128,7 @@ export default createSchema({
         simpleSection,
         richTextSection,
         faqSection,
+        timelineBlock,
         latestArticlesSection,
         menuItem,
         fileAsset,

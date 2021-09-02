@@ -61,12 +61,12 @@ export default {
 
     preview: {
         select: {
-            title: 'heading',
+            title: 'headline',
             disabled: 'disabled'
         },
         prepare({ title, disabled }) {
             return {
-                title: `${disabled ? 'DISABLED: ' : ''}${'Love Club Section: ' + title ||
+                title: `${disabled ? 'DISABLED: ' : ''}${title? 'Love Club Section: ' + title :
           'Love Club Section'}`
             }
         }

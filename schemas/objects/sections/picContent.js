@@ -192,11 +192,13 @@ export default {
     preview: {
         select: {
             title: 'heading',
-            disabled: 'disabled'
+            disabled: 'disabled',
+            location: 'picType.picLocation'
         },
-        prepare({ title, disabled }) {
+        prepare({ title, disabled, location }) {
             return {
-                title: `${disabled ? 'DISABLED: ' : ''} ${title || 'Pic Content'}`
+                title: `${disabled ? 'DISABLED: ' : ''} ${'Pic Content: ' + title + ': ' + location ||
+          'Pic Content' + location}`
             }
         }
     }

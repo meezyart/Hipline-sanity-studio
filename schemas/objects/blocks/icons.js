@@ -15,7 +15,7 @@ export default {
             name: 'heading',
             title: 'Icon name',
             type: 'string',
-            description: 'can be any name to referance'
+            description: 'can be any name to reference'
         },
         {
             name: 'icon',
@@ -26,11 +26,6 @@ export default {
             name: 'iconDepth',
             type: 'number',
             title: 'Icon Depth'
-        },
-        {
-            name: 'iconPosition',
-            type: 'number',
-            title: 'Icon Position'
         }
     ],
     preview: {

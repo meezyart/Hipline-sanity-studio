@@ -7,11 +7,22 @@ export default {
     type: 'document',
     icon: IoMdHeart,
     fields: [{
+            name: 'disabled',
+            title: 'Disable Section?',
+            type: 'boolean'
+        },
+        {
             name: 'headline',
             title: 'Love Club Headline',
             description: 'This is the title for the section',
             type: 'string',
             validation: Rule => Rule.required()
+        },
+        {
+            name: 'mainImage',
+            type: 'mainImage',
+            title: 'Love Club Image',
+            description: 'Select Image will be Constrained to dimensions - 500 x (imageHeight), Filesizea\n - less than 500 k(800 k max)'
         },
         {
             name: 'loveClubIntro',
@@ -24,18 +35,18 @@ export default {
             title: 'Form Link',
             type: 'cta'
         }
-    ]
+    ],
 
-    // preview: {
-    //     select: {
-    //         title: 'heading',
-    //         disabled: 'disabled'
-    //     },
-    //     prepare({ title, disabled }) {
-    //         return {
-    //             title: `${disabled ? 'DISABLED: ' : ''}${'Class Menu Section: ' + title ||
-    //       'Class Menu Section'}`
-    //         }
-    //     }
-    // }
+    preview: {
+        select: {
+            title: 'headline',
+
+            disabled: 'disabled'
+        },
+        prepare({ title, disabled }) {
+            return {
+                title: `${disabled ? 'DISABLED: ' : ''}${title ? 'Love Club: ' + title : 'Love Club'}`
+            }
+        }
+    }
 }

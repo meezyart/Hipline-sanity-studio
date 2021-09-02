@@ -27,7 +27,7 @@ export default {
         },
         prepare({ title, disabled }) {
             return {
-                title: `${disabled ? 'DISABLED: ' : ''} ${title || 'FAQ Section'}`
+                title: `${disabled ? 'DISABLED: ' : ''} ${title ? 'FAQ Section: ' + title : 'FAQ Section'}`
 
             }
         }

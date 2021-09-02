@@ -4,7 +4,7 @@ export default {
     type: 'object',
     fields: [{
             name: 'disabled',
-            title: 'Disable Section?',
+            title: 'Disable Page Hero?',
             type: 'boolean'
         },
         {
@@ -41,7 +41,7 @@ export default {
         },
         prepare({ title, disabled }) {
             return {
-                title: `${disabled ? 'DISABLED: ' : ''} ${title || 'FAQ Section'}`
+                title: `${disabled ? 'DISABLED: ' : ''} ${title ? 'Hero Banner: ' + title : 'Hero Banner'}`
             }
         }
     }

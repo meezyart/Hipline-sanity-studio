@@ -18,13 +18,13 @@ export default {
             type: 'string',
             validation: Rule => Rule.required()
         },
+
         // {
-        //     name: 'navMenu',
-        //     type: 'reference',
-        //     title: 'Navigation menu',
+        //     name: 'showHero',
+        //     type: 'boolean',
+        //     title: 'Show Hero',
         //     // weak: true, // Uncomment if you want to be able to delete navigation even though pages refer to it
-        //     to: [{ type: 'menu' }],
-        //     description: 'Which nav menu should be shown, if any',
+        //     description: 'Show Hero for this page'
         // },
         {
             name: 'slug',
@@ -50,6 +50,17 @@ export default {
             name: 'useSiteTitle',
             type: 'boolean'
         },
+        // {
+        //     name: 'hero',
+        //     type: 'heroSection',
+        //     title: 'Page Hero',
+        //     // weak: true, // Uncomment if you want to be able to delete navigation even though pages refer to it
+        //     description: 'This is the page hero For all secondary pages Hero size is 1920px x 500px',
+        //     options: {
+        //         collapsible: true,
+        //         collapsed: false
+        //     }
+        // },
         {
             name: 'pageSections',
             title: 'Page Sections',
@@ -57,6 +68,12 @@ export default {
             type: 'array',
             // Insert page sections here
             of: [{
+                    type: 'heroSection'
+                },
+                {
+                    type: 'pageTitleSection'
+                },
+                {
                     type: 'richTextSection'
                 },
                 {
@@ -67,6 +84,9 @@ export default {
                 },
                 {
                     type: 'testimonialSection'
+                },
+                {
+                    type: 'timelineSection'
                 },
                 {
                     type: 'classMenuSection'
