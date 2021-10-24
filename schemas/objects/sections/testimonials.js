@@ -8,10 +8,16 @@ export default {
             type: 'boolean'
         },
         {
+            name: 'subTitle',
+            title: 'Sub Title',
+            type: 'string',
+            description: 'Used as the subtitle of this section. use span to change the color of text headline <span>hightlight</span>'
+        },
+        {
             name: 'heading',
             title: 'Heading',
-            type: 'string'
-                // description: 'Used as the main heading of this section. use span to change the color of text headline <span>hightlight</span>'
+            type: 'string',
+            // description: 'Used as the main heading of this section. use span to change the color of text headline <span>hightlight</span>'
         },
         {
             name: 'version',
@@ -20,10 +26,23 @@ export default {
             options: {
                 list: [
                     { title: 'Version 1', value: 'version1' },
-                    { title: 'Version 2', value: 'version2' }
+                    { title: 'Version 2', value: 'version2' },
+                    { title: 'Version 3', value: 'version3' },
                 ],
                 layout: 'radio'
             }
+        },
+        // {
+        //     name: 'Intro',
+        //     title: 'Testimonials Section Intro Text',
+        //     description: 'This is optional',
+        //     type: 'excerptPortableText'
+        // },
+        {
+            name: 'bkgrdColor',
+            title: 'Section Background Color',
+            description: 'This is optional default is #f5f5f5',
+            type: 'bckgrdColorBlock'
         },
         {
             name: 'testimonials',
@@ -31,8 +50,17 @@ export default {
             type: 'array',
             description: 'Add your Testimonies here',
             of: [{
-                type: 'testimonialBlock'
-            }]
+                type: 'reference',
+                // name: 'loveClubForms',
+                title: 'Testimonials',
+                to: [{
+                    type: 'testimonialBlock'
+                }]
+            }],
+            validation: Rule => Rule.unique()
+                // options: {
+                //     layout: 'tags'
+                // }
         }
     ],
     preview: {

@@ -80,6 +80,10 @@ export default {
                     type: 'picContentSection'
                 },
                 {
+                    type: 'infoBoxSection'
+                },
+
+                {
                     type: 'faqSection'
                 },
                 {
@@ -98,7 +102,13 @@ export default {
                     type: 'classScheduleSection'
                 },
                 {
+                    type: 'dancerSection'
+                },
+                {
                     type: 'loveClubSection'
+                },
+                {
+                    type: 'contactSection'
                 }
             ]
         },

@@ -17,7 +17,7 @@ export default {
             name: 'landingPageRoute',
             type: 'reference',
             fieldset: 'link',
-            to: [{ type: 'route' }]
+            to: [{ type: 'page' }]
         },
         {
             title: 'Path  (Internal Link)',

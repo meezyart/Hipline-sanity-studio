@@ -2,7 +2,7 @@
 import { MdHeart } from 'react-icons/md'
 
 export default {
-    name: 'loveClubSection',
+    name: 'pressSection',
     title: 'Love Club Section',
     type: 'object',
     icon: MdHeart,

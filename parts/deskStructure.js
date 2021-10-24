@@ -98,25 +98,25 @@ S.list()
                 S.documentTypeListItem('article')
                 .title('All Articles')
                 .icon(MdCollectionsBookmark),
-                S.listItem()
-                .title('Articles By Category')
-                .icon(MdCollectionsBookmark)
-                .child(
-                    S.documentTypeList('pressCategory')
-                    .title('Articles By Category')
-                    .child(catId =>
-                        S.documentList()
-                        .schemaType('article')
-                        .title('Articles')
-                        .filter('_type == "article" && $catId in categories[]._ref')
-                        .params({
-                            catId
-                        })
-                    )
-                ),
-                S.documentTypeListItem('pressCategory')
-                .title('Categories')
-                .icon(MdApps)
+                // S.listItem()
+                // .title('Articles By Category')
+                // .icon(MdCollectionsBookmark)
+                // .child(
+                //     S.documentTypeList('pressCategory')
+                //     .title('Articles By Category')
+                //     .child(catId =>
+                //         S.documentList()
+                //         .schemaType('article')
+                //         .title('Articles')
+                //         .filter('_type == "article" && $catId in categories[]._ref')
+                //         .params({
+                //             catId
+                //         })
+                //     )
+                // ),
+                // S.documentTypeListItem('pressCategory')
+                // .title('Categories')
+                // .icon(MdApps)
             ])
         ),
 

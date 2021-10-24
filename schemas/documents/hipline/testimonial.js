@@ -1,15 +1,30 @@
+import { GiTalk } from 'react-icons/gi'
+
 export default {
     name: 'testimonialBlock',
-    type: 'object',
-
+    title: 'Testimonials',
+    type: 'document',
+    icon: GiTalk,
     fields: [{
             name: 'disabled',
-            title: 'Disable Section?',
+            title: 'Disable Testimonial?',
             type: 'boolean'
+        },
+        {
+            name: 'title',
+            title: 'Testimonial Title ',
+            type: 'string',
+            description: 'Used as the Title of this section. Only in Version 2'
         },
         {
             name: 'author',
             title: 'Author',
+            type: 'string',
+            validation: Rule => Rule.required()
+        },
+        {
+            name: 'position',
+            title: 'Occupation ',
             type: 'string'
                 // description: 'Used as the main heading of this section. use span to change the color of text headline <span>hightlight</span>'
         },
@@ -32,8 +47,7 @@ export default {
         },
         prepare({ title, disabled }) {
             return {
-                title: `${disabled ? 'DISABLED: ' : ''} ${'Author : ' + title  ||
-          'Testimonials'}`
+                title: `${disabled ? 'DISABLED: ' : ''} ${'Author : ' + title || 'Testimonials'}`
             }
         }
     }

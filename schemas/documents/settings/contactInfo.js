@@ -16,7 +16,7 @@ export default {
             },
             fields: [{
                     name: 'companyEmail',
-                    title: 'Email Address*',
+                    title: 'Main Email Address*',
                     type: 'string',
                     validation: Rule => Rule.required()
                 },
@@ -27,9 +27,19 @@ export default {
                     row: 2
                 },
                 {
+                    name: 'statement',
+                    title: 'Company Statement',
+                    type: 'string'
+                },
+                {
+                    name: 'companyHours',
+                    title: 'Company Hours',
+                    type: 'string'
+                },
+                {
                     name: 'companyPhone',
                     title: 'Company Phone Number',
-                    type: 'number'
+                    type: 'string'
                 },
                 {
                     name: 'companyLocationLink',
@@ -48,10 +58,6 @@ export default {
                 }
             ]
         }
-        // {
-        //     name: 'companyLocation',
-        //     title: 'Company Location (geopoint)',
-        //     type: 'geopoint'
-        // },
+
     ]
 }

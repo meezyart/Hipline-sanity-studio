@@ -2,8 +2,8 @@
 import { MdHeart } from 'react-icons/md'
 
 export default {
-    name: 'loveClubSection',
-    title: 'Love Club Section',
+    name: 'dancerSection',
+    title: 'Choreographer Section',
     type: 'object',
     icon: MdHeart,
     fields: [{
@@ -12,34 +12,15 @@ export default {
             type: 'boolean'
         }, {
             name: 'headline',
-            title: 'Love Club Headline',
-            description: '',
+            title: 'Choreographer Headline',
+            description: 'This is optional',
             type: 'string',
-            validation: Rule => Rule.required()
         },
         {
-            name: 'loveClubIntro',
-            title: 'Love Club Section Intro Text',
+            name: 'dancerIntro',
+            title: 'Choreographer Section Intro Text',
             description: 'This is optional',
             type: 'excerptPortableText'
-        },
-        {
-            name: 'loveClubForm',
-            type: 'array',
-            title: 'Love Club Forms',
-            description: 'Select the forms for this section',
-            of: [{
-                type: 'reference',
-                // name: 'loveClubForms',
-                title: 'Love Club Forms',
-                to: [{
-                    type: 'loveClubBlock'
-                }]
-            }],
-            validation: Rule => Rule.unique()
-                // options: {
-                //     layout: 'tags'
-                // }
         }
         // {
         //     name: 'passCategory',
@@ -66,8 +47,7 @@ export default {
         },
         prepare({ title, disabled }) {
             return {
-                title: `${disabled ? 'DISABLED: ' : ''}${title? 'Love Club Section: ' + title :
-          'Love Club Section'}`
+                title: `${disabled ? 'DISABLED: ' : ''}${'Choreographer Section'}`
             }
         }
     }

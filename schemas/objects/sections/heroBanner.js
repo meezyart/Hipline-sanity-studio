@@ -28,6 +28,13 @@ export default {
             }
         },
         {
+            name: 'showBreadCrumb',
+            title: 'Show Bread Crumb',
+            type: 'boolean',
+            initialValue: true,
+            description: 'Show the breadcrumb menu on this page'
+        },
+        {
             name: 'heroImage',
             type: 'mainImage',
             title: 'Hero Image',

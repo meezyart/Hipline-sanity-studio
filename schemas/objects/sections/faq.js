@@ -1,7 +1,10 @@
+import { HiQuestionMarkCircle } from 'react-icons/hi'
+
 export default {
     name: 'faqSection',
     title: 'FAQS',
     type: 'object',
+    icon: HiQuestionMarkCircle,
     fields: [{
             name: 'disabled',
             title: 'Disable Section?',
@@ -11,8 +14,9 @@ export default {
             name: 'heading',
             title: 'Heading',
             type: 'string',
-            description: 'Used as the main heading of this section.',
-        }, {
+            description: 'Used as the main heading of this section.'
+        },
+        {
             name: 'faqItems',
             title: 'Faq',
             type: 'array',
@@ -28,7 +32,6 @@ export default {
         prepare({ title, disabled }) {
             return {
                 title: `${disabled ? 'DISABLED: ' : ''} ${title ? 'FAQ Section: ' + title : 'FAQ Section'}`
-
             }
         }
     }

@@ -9,6 +9,7 @@ import choreographers from './documents/hipline/choreographers'
 import classMenu from './documents/hipline/classMenu'
 import passBlock from './documents/hipline/pass'
 import loveClubBlock from './documents/hipline/loveClub'
+import testimonialBlock from './documents/hipline/testimonial'
 import article from './documents/articles/article'
 import articleCategory from './documents/articles/category'
 import sectionsHeader from './documents/sections/header'
@@ -32,7 +33,6 @@ import vimeoBlock from './objects/blocks/vimeo'
 import socialBlock from './objects/blocks/socialBlock'
 import iconBlock from './objects/blocks/icons'
 import contactBlock from './objects/blocks/contact'
-import testimonialBlock from './objects/blocks/testimonial'
 import cta from './objects/cta'
 
 import simpleBlockContent from './objects/blocks/simpleBlockContent'
@@ -59,11 +59,15 @@ import testimonialSection from './objects/sections/testimonials'
 import latestArticlesSection from './objects/sections/latestArticles'
 import heroSection from './objects/sections/heroBanner'
 import classMenuSection from './objects/hipline/classMenu'
+import dancerSection from './objects/hipline/dancerSection'
 import pageTitleSection from './objects/hipline/pageTitle'
 import classPassSection from './objects/hipline/classPass'
 import timelineSection from './objects/hipline/timeline'
+import contactSection from './objects/hipline/contact'
+import bckgrdColorBlock from './objects/hipline/bckgrdOpts'
 import classScheduleSection from './objects/hipline/classSchedule'
 import loveClubSection from './objects/hipline/loveClub'
+import infoBoxSection from './objects/hipline/infoBox'
 import menuItem from './objects/menuItem'
 import socialSiteFacebook from './objects/settings/facebook'
 import socialSiteTwitter from './objects/settings/twitter'
@@ -88,9 +92,11 @@ export default createSchema({
         settingsAnnouncements,
         settingsLogo,
         choreographers,
+        infoBoxSection,
         classMenu,
         article,
         articleCategory,
+        contactSection,
         // passMenu,
         passBlock,
         contactBlock,
@@ -101,10 +107,12 @@ export default createSchema({
         timelineSection,
         pageTitleSection,
         classMenuSection,
+        dancerSection,
         heroSection,
         classPassSection,
         classScheduleSection,
         loveClubSection,
+        bckgrdColorBlock,
         iconBlock,
         // passCategory,
         /* Objects */
