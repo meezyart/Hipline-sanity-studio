@@ -29,26 +29,37 @@ export default {
             type: 'datetime',
             title: 'Published At',
             description: 'Can be used to schedule post for publishing.',
+            options: {
+                dateFormat: 'YYYY-MM-DD',
+                calendarTodayLabel: 'Today'
+            },
             validation: Rule => Rule.required()
         },
         // {
-        //   name: 'categories',
-        //   type: 'array',
-        //   title: 'Categories',
-        //   description: 'Will organize the article into groups.',
-        //   of: [
-        //     {
-        //       type: 'reference',
-        //       icon: MdCreate,
-        //       to: [
-        //         {
-        //           type: 'pressCategory'
-        //         }
-        //       ],
-        //       weak: true
-        //     }
-        //   ]
+        //     name: 'categories',
+        //     type: 'array',
+        //     title: 'Categories',
+        //     description: 'Will organize the article into groups.',
+        //     // of: [{
+        //     //     type: 'reference',
+        //     //     icon: MdCreate,
+        //     //     to: [{
+        //     //         type: 'pressCategory'
+        //     //     }],
+        //     //     weak: true
+        //     // }]
         // },
+        {
+            name: 'category',
+            type: 'string',
+            title: 'Press Category/Section',
+            initialValue: 'Latest News',
+            description: 'this Populates the subTitle. You can change if you want this to be different'
+
+            // options: {
+            //     layout: 'tags'
+            // }
+        },
         {
             name: 'featuredImage',
             title: 'Hero Image',

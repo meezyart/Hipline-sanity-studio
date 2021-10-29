@@ -13,6 +13,11 @@ export default {
             to: [{
                 type: 'menu'
             }]
+        }, {
+            name: 'menuImage',
+            type: 'mainImage',
+            title: 'Mobile Menu Image',
+            description: 'This will be the side background image. Its a vertical Image 360x760'
         },
 
     ]

@@ -10,6 +10,7 @@ import classMenu from './documents/hipline/classMenu'
 import passBlock from './documents/hipline/pass'
 import loveClubBlock from './documents/hipline/loveClub'
 import testimonialBlock from './documents/hipline/testimonial'
+import heroSliderBlock from './documents/hipline/heroSlide'
 import article from './documents/articles/article'
 import articleCategory from './documents/articles/category'
 import sectionsHeader from './documents/sections/header'
@@ -58,8 +59,10 @@ import richTextSection from './objects/sections/richText'
 import testimonialSection from './objects/sections/testimonials'
 import latestArticlesSection from './objects/sections/latestArticles'
 import heroSection from './objects/sections/heroBanner'
+import heroSliderSection from './objects/sections/heroSlider'
 import classMenuSection from './objects/hipline/classMenu'
 import dancerSection from './objects/hipline/dancerSection'
+import pressSection from './objects/hipline/pressSection'
 import pageTitleSection from './objects/hipline/pageTitle'
 import classPassSection from './objects/hipline/classPass'
 import timelineSection from './objects/hipline/timeline'
@@ -102,6 +105,7 @@ export default createSchema({
         contactBlock,
         loveClubBlock,
         testimonialBlock,
+        heroSliderBlock,
         picContentSection,
         testimonialSection,
         timelineSection,
@@ -109,7 +113,9 @@ export default createSchema({
         classMenuSection,
         dancerSection,
         heroSection,
+        heroSliderSection,
         classPassSection,
+        pressSection,
         classScheduleSection,
         loveClubSection,
         bckgrdColorBlock,
@@ -125,6 +131,7 @@ export default createSchema({
         navDropDown,
         simpleBlockContent,
         excerptPortableText,
+
         // instagram,
         // videoEmbed,
         openGraph,

@@ -3,7 +3,7 @@ import { MdHeart } from 'react-icons/md'
 
 export default {
     name: 'pressSection',
-    title: 'Love Club Section',
+    title: 'Press Section',
     type: 'object',
     icon: MdHeart,
     fields: [{
@@ -11,63 +11,56 @@ export default {
             title: 'Disable Section?',
             type: 'boolean'
         }, {
-            name: 'headline',
-            title: 'Love Club Headline',
+            name: 'title',
+            title: 'Press Headline',
             description: '',
             type: 'string',
-            validation: Rule => Rule.required()
+            // validation: Rule => Rule.required()
         },
         {
-            name: 'loveClubIntro',
-            title: 'Love Club Section Intro Text',
+            name: 'pressIntro',
+            title: 'Press Section Intro Text',
             description: 'This is optional',
             type: 'excerptPortableText'
         },
         {
-            name: 'loveClubForm',
-            type: 'array',
-            title: 'Love Club Forms',
-            description: 'Select the forms for this section',
-            of: [{
-                type: 'reference',
-                // name: 'loveClubForms',
-                title: 'Love Club Forms',
-                to: [{
-                    type: 'loveClubBlock'
+            name: 'pressBlockCount',
+            type: 'string',
+            title: 'Press Box Amount',
+            description: 'Select how many press boxes you want showing',
+            options: {
+                layout: 'radio',
+                list: [{
+                    title: 'Show All',
+                    value: 'all'
+                }, {
+                    title: 'Latest 3',
+                    value: '3'
+                }, {
+                    title: 'As a Slider',
+                    value: 'slider'
                 }]
-            }],
-            validation: Rule => Rule.unique()
-                // options: {
-                //     layout: 'tags'
-                // }
-        }
-        // {
-        //     name: 'passCategory',
-        //     type: 'array',
-        //     title: 'Pass Category/Section',
-        //     description: 'Select the category for this section',
-        //     of: [{
-        //         type: 'reference',
-        //         icon: MdCreate,
-        //         to: [{ type: 'passCategory' }]
-        //             // weak: true
-        //     }],
-        //     validation: Rule => Rule.unique()
-        //         // options: {
-        //         //     layout: 'tags'
-        //         // }
-        // }
+            }
+            // options: {
+            //     layout: 'tags'
+            // }
+        }, {
+            name: 'bkgrdColor',
+            title: 'Section Background Color',
+            description: 'This is optional.',
+            type: 'bckgrdColorBlock'
+        },
     ],
 
     preview: {
         select: {
-            title: 'headline',
+            title: 'title',
             disabled: 'disabled'
         },
         prepare({ title, disabled }) {
             return {
-                title: `${disabled ? 'DISABLED: ' : ''}${title? 'Love Club Section: ' + title :
-          'Love Club Section'}`
+                title: `${disabled ? 'DISABLED: ' : ''}${title? 'Press Section: ' + title :
+          'Press Section'}`
             }
         }
     }
