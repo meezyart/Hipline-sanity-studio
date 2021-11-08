@@ -27,14 +27,14 @@ export default {
         description:
           'NOTE: Because these sites are static builds, they need to be re-deployed to see the changes when documents are published.',
         sites: [
+          // {
+          //   buildHookId: '60af41ad4f3c36a1abf0e656',
+          //   title: 'Sanity Studio Hipline',
+          //   name: 'hipline-sanity-studio',
+          //   apiId: 'e6e9e62f-f363-4bba-a984-5b9ef6145507'
+          // },
           {
-            buildHookId: '60af41ad4f3c36a1abf0e656',
-            title: 'Sanity Studio Hipline',
-            name: 'hipline-sanity-studio',
-            apiId: 'e6e9e62f-f363-4bba-a984-5b9ef6145507'
-          },
-          {
-            buildHookId: '6041599a5936a717e2a5c3ac',
+            buildHookId: '61819c5f8cebd5396c472efb',
             title: 'Hipline Website',
             name: 'hipline',
             apiId: '9eacabf1-2d57-45b0-b4f7-34e6bf6f9f7c'
