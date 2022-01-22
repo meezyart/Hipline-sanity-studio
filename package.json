@@ -12,6 +12,7 @@
         "develop": "sanity start",
         "build": "sanity build",
         "deploy": "sanity deploy",
+        "start": "sanity start",
         "format": "prettier-eslint --write $PWD/\"**/*.js\" $PWD/\"!node_modules/**\" --config ./.prettierrc",
         "lint": "eslint .",
         "test": "sanity check",
