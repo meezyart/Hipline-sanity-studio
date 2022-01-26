@@ -25,7 +25,7 @@ export default {
           },
           {
             title: 'teal',
-            value: '#A8EBF3;
+            value: '#A8EBF3'
           },
           {
             title: 'teal-blue',
