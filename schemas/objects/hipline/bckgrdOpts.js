@@ -107,7 +107,9 @@ export default {
     },
     {
       name: 'customColor',
-
+      options: {
+        collapsible: true, collapsed:true,
+      },
       title: 'Custom Background Color',
       description: 'This uses a hex color',
       type: 'string' // make this a background choose your own
