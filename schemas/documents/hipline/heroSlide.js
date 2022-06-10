@@ -46,6 +46,13 @@ export default {
       description:
         'Select Recommended dimensions - 1920 x 700, Filesize\n - less than 1000 k(800 k max)',
       validation: Rule => Rule.required()
+    },
+    {
+      name: 'sliderDelay',
+      type: 'Slider Delay',
+      description:
+        'Default is 9000 ms. You can update is need to make this slide hold longer',
+
     }
   ]
 }
