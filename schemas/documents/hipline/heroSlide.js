@@ -49,10 +49,9 @@ export default {
     },
     {
       name: 'sliderDelay',
-      type: 'Slider Delay',
-      description:
-        'Default is 9000 ms. You can update is need to make this slide hold longer',
-
+      type: 'string',
+      title: 'Slider Delay',
+      description: 'Default is 9000 ms. You can update is need to make this slide hold longer'
     }
   ]
 }
