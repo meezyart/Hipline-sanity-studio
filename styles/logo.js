@@ -98,7 +98,9 @@ const Logo = ({ projectName }) => {
 const Icon = styled.div`
   display: block;
   width: auto;
-  // height: 2em;
+  height: 100%;
+  height: 2.75em ;
+  padding:.3rem;
   max-width: 100%;
   margin: -1em auto;
   color: white;
@@ -119,9 +121,9 @@ const Icon = styled.div`
   svg {
     display: block;
     margin: 0 auto;
-    height: 100%;
-    width: auto;
-    fill: #ffc9f4;
+    height: 100% !important;
+    width: auto !important;
+    fill: #ffc9f4 !important;
   }
 `
 
