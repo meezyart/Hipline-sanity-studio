@@ -33,8 +33,8 @@ export default {
         {
             name: 'topCtaLink',
             title: 'Top Nav Button',
-            description: '',
-            type: 'cta'
+            description: 'Top nav button Connected to Mind Body',
+            type: 'mboSection'
         }
     ]
 }

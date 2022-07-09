@@ -71,6 +71,7 @@ import bckgrdColorBlock from './objects/hipline/bckgrdOpts'
 import classScheduleSection from './objects/hipline/classSchedule'
 import loveClubSection from './objects/hipline/loveClub'
 import infoBoxSection from './objects/hipline/infoBox'
+import mboSection from './objects/hipline/mbo'
 import menuItem from './objects/menuItem'
 import socialSiteFacebook from './objects/settings/facebook'
 import socialSiteTwitter from './objects/settings/twitter'
@@ -108,6 +109,7 @@ export default createSchema({
         heroSliderBlock,
         picContentSection,
         testimonialSection,
+        mboSection,
         timelineSection,
         pageTitleSection,
         classMenuSection,
