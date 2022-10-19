@@ -68,6 +68,7 @@ export default {
                 name: 'reference',
                 type: 'reference',
                 title: '(A) Internal Page',
+                description: 'Dont forget to link the Page Gab!',
                 to: [{ type: 'article' }, { type: 'page' }]
               },
               {
