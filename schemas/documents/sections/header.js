@@ -20,7 +20,7 @@ export default {
             type: 'object',
             fields: [{
                 name: 'showLogin',
-                title: 'Show Login Button',
+                title: 'Show Mind Body Login Button',
                 description: '',
                 type: 'boolean'
             }, {
@@ -28,13 +28,24 @@ export default {
                 title: 'Show Cart Button',
                 description: '',
                 type: 'boolean'
+            }, {
+                name: 'showButton',
+                title: 'Show Top Nav Button',
+                description: '',
+                type: 'boolean'
             }]
+        },
+        {
+            name: 'topAccount',
+            title: 'Top Account Button',
+            description: 'This is the Mbo account link',
+            type: 'mboSection'
         },
         {
             name: 'topCtaLink',
             title: 'Top Nav Button',
-            description: 'Top nav button Connected to Mind Body',
-            type: 'mboSection'
+            description: 'Top nav pink button  ',
+            type: 'cta'
         }
     ]
 }
