@@ -3,3 +3,5 @@
 /dist
 production.tar.gz
 yarn.lock
+.yarn/install-state.gz
+

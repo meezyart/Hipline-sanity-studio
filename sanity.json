@@ -19,13 +19,15 @@
     "media",
     "@sanity/google-maps-input",
     "note-field",
+    "mux-input",
     "content-calendar",
     "color-list"
   ],
   "env": {
     "development": {
       "plugins": [
-        "@sanity/vision"
+        "@sanity/vision",
+        "mux-input"
       ]
     }
   },

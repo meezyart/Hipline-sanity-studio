@@ -161,6 +161,20 @@ export default {
       }
     },
     {
+      title: 'Video Cover Main',
+      description:
+        'Search for Recommended dimensions - 537 x 429, Filesize - less than 500 k(800 k max)',
+      name: "dancerVideoMain",
+      type: "document",
+      fields: [
+        {
+          title: "Video file",
+          name: "video",
+          type: "mux.video"
+        }
+      ]
+    },
+    {
       name: 'coverVideoMain',
       type: 'fileAsset',
       title: 'Cover Video Main',
