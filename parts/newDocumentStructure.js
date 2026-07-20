@@ -7,7 +7,8 @@ const hiddenDocTypes = listItem =>
     'settingsSeo',
     'settingsFavicons',
     'settingsSocial',
-    'settingsAnalytics'
+    'settingsAnalytics',
+    'settingsMomence'
   ].includes(listItem.getId())
 
 export default [...S.defaultInitialValueTemplateItems().filter(hiddenDocTypes)]

@@ -16,7 +16,8 @@ import {
     MdBuild,
     MdLanguage,
     MdPeople,
-    MdShowChart
+    MdShowChart,
+    MdEventAvailable
 } from 'react-icons/md'
 // import SeoPreview from '../schemas/components/preview/seo-preview'
 
@@ -46,7 +47,8 @@ const hiddenDocTypes = listItem =>
         'settingsAnalytics',
         'settingsContactInfo',
         'settingsAnnouncements',
-        'settingsLogo'
+        'settingsLogo',
+        'settingsMomence'
     ].includes(listItem.getId())
 
 export default () =>
@@ -263,6 +265,15 @@ S.list()
                 //     .schemaType('settingsCookie')
                 //     .documentId('settingsCookie')
                 // ),
+                S.listItem()
+                .title('Momence')
+                .icon(MdEventAvailable)
+                .child(
+                    S.document()
+                    .title('Momence')
+                    .schemaType('settingsMomence')
+                    .documentId('settingsMomence')
+                ),
                 S.listItem()
                 .title('Site Logo')
                 .icon(MdDonutSmall)
