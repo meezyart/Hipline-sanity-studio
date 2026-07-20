@@ -5,6 +5,15 @@ export default {
     title: 'Passes',
     type: 'document',
     icon: MdNextWeek,
+    fieldsets: [{
+        name: 'purchase',
+        title: 'Purchase',
+        description: 'Manage where this pass sends customers to buy.',
+        options: {
+            collapsible: true,
+            collapsed: false
+        }
+    }],
     fields: [{
             name: 'disabled',
             title: 'Disable Section?',
@@ -42,21 +51,83 @@ export default {
 
         {
             name: 'mbo',
-            title: 'Mind Body Data Info',
-            description: 'This is the info you get when you create a link in Mbo Backend',
+            title: 'Legacy provider data',
+            description: 'Temporarily retained for migration. New purchases belong in the Purchase fields.',
+            hidden: true,
             type: 'mboSection',
             
         },
 
         {
             name: 'passLink',
-            title: 'Mind Body Link',
-            description: 'Use the External Link for this (optional)',
+            title: 'Legacy purchase link',
+            description: 'Temporarily retained for migration. Use Purchase URL for new changes.',
+            hidden: true,
             type: 'cta',
             options: {
                 collapsible: true, // Makes the whole fieldset collapsible
                 collapsed: true, // Defines if the fieldset should be collapsed by default or not
             },
+        },
+        {
+            name: 'purchaseProvider',
+            title: 'Purchase provider',
+            type: 'string',
+            fieldset: 'purchase',
+            initialValue: 'momence',
+            options: {
+                layout: 'radio',
+                list: [
+                    { title: 'Momence', value: 'momence' },
+                    { title: 'External HTTPS checkout', value: 'external' }
+                ]
+            }
+        },
+        {
+            name: 'purchaseUrl',
+            title: 'Purchase URL',
+            description: 'Paste the approved Momence or external HTTPS purchase URL.',
+            type: 'url',
+            fieldset: 'purchase',
+            validation: Rule => Rule.uri({ scheme: ['https'], allowRelative: false })
+        },
+        {
+            name: 'purchaseButtonLabel',
+            title: 'Purchase button label',
+            type: 'string',
+            fieldset: 'purchase',
+            initialValue: 'Buy Now'
+        },
+        {
+            name: 'purchasePresentation',
+            title: 'Purchase display',
+            type: 'string',
+            fieldset: 'purchase',
+            initialValue: 'popup',
+            options: {
+                layout: 'radio',
+                list: [
+                    { title: 'Popup checkout', value: 'popup' },
+                    { title: 'External link', value: 'external-link' }
+                ]
+            }
+        },
+        {
+            name: 'momenceProductId',
+            title: 'Momence product ID',
+            description: 'Optional public Momence membership or product identifier.',
+            type: 'string',
+            fieldset: 'purchase',
+            validation: Rule => Rule.regex(/^\d+$/, { name: 'numeric product ID' })
+        },
+        {
+            name: 'purchaseOpenInNewTab',
+            title: 'Legacy purchase presentation',
+            description: 'Legacy presentation field retained for migration.',
+            hidden: true,
+            type: 'boolean',
+            fieldset: 'purchase',
+            initialValue: true
         }
     ],
     preview: {

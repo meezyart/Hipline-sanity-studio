@@ -110,6 +110,12 @@ export default {
           type: 'classScheduleSection'
         },
         {
+          type: 'momenceVideoSection'
+        },
+        {
+          type: 'externalServiceSection'
+        },
+        {
           type: 'pressSection'
         },
         {

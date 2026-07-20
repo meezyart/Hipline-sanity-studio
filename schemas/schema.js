@@ -25,6 +25,7 @@ import settingsAnalytics from './documents/settings/analytics'
 import settingsContactInfo from './documents/settings/contactInfo'
 import settingsLogo from './documents/settings/logo'
 import settingsAnnouncements from './documents/settings/announcements'
+import settingsMomence from './documents/settings/momence'
 
 // Objects
 import richTextBlock from './objects/blocks/richText'
@@ -72,6 +73,8 @@ import classScheduleSection from './objects/hipline/classSchedule'
 import loveClubSection from './objects/hipline/loveClub'
 import infoBoxSection from './objects/hipline/infoBox'
 import mboSection from './objects/hipline/mbo'
+import momenceVideoSection from './objects/hipline/momenceVideo'
+import externalServiceSection from './objects/hipline/externalService'
 import menuItem from './objects/menuItem'
 import socialSiteFacebook from './objects/settings/facebook'
 import socialSiteTwitter from './objects/settings/twitter'
@@ -95,6 +98,7 @@ export default createSchema({
         settingsContactInfo,
         settingsAnnouncements,
         settingsLogo,
+        settingsMomence,
         choreographers,
         infoBoxSection,
         classMenu,
@@ -110,6 +114,8 @@ export default createSchema({
         picContentSection,
         testimonialSection,
         mboSection,
+        momenceVideoSection,
+        externalServiceSection,
         timelineSection,
         pageTitleSection,
         classMenuSection,
