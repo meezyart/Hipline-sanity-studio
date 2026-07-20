@@ -51,18 +51,46 @@ export default {
       name: 'fallbackUrl',
       title: 'External fallback URL',
       type: 'url',
-      validation: Rule => Rule.required().uri({ scheme: ['https'], allowRelative: false })
+      description: 'Use for a single action. For tiered offers, configure the actions below instead.',
+      validation: Rule => Rule.uri({ scheme: ['https'], allowRelative: false })
     },
     {
       name: 'frameTitle',
       title: 'Accessible frame title',
       type: 'string',
-      validation: Rule => Rule.required()
+      description: 'Required when this section uses an iframe or popup.'
     },
     {
       name: 'actionLabel',
       title: 'Button label',
       type: 'string'
+    },
+    {
+      name: 'actions',
+      title: 'Client-managed actions',
+      description: 'Use for multiple options such as Sliding Scale tiers. Each URL is set by the client and opens securely in a new tab.',
+      type: 'array',
+      of: [{
+        type: 'object',
+        fields: [
+          {
+            name: 'label',
+            title: 'Button label',
+            type: 'string',
+            validation: Rule => Rule.required()
+          },
+          {
+            name: 'url',
+            title: 'Secure destination URL',
+            type: 'url',
+            validation: Rule => Rule.required().uri({ scheme: ['https'], allowRelative: false })
+          }
+        ],
+        preview: {
+          select: { title: 'label', subtitle: 'url' }
+        }
+      }],
+      validation: Rule => Rule.max(6)
     },
     {
       name: 'desktopHeight',
