@@ -1,6 +1,7 @@
 export default {
   name: 'externalServiceSection',
-  title: 'External Service Section',
+  title: 'Iframe / Momence Plugin',
+  description: 'Embed an approved iframe URL or paste official Momence plugin code, including Appointments.',
   type: 'object',
   fields: [
     {
@@ -46,6 +47,19 @@ export default {
       description: 'Required for on-page and popup displays. The hostname must also be approved in Momence settings.',
       type: 'url',
       validation: Rule => Rule.uri({ scheme: ['https'], allowRelative: false })
+    },
+    {
+      name: 'momencePluginCode',
+      title: 'Momence plugin code',
+      description: 'Paste the complete code copied from Momence Studio Setup > Add to Website, such as the Appointments plugin. Only approved Momence plugin scripts are rendered.',
+      type: 'text',
+      rows: 8,
+      validation: Rule => Rule.custom(value => {
+        if (!value) return true
+        return /<script\b[\s\S]*https:\/\/momence\.com\/plugin\/[\s\S]*<\/script>/i.test(value)
+          ? true
+          : 'Paste the complete plugin code copied from Momence.'
+      })
     },
     {
       name: 'fallbackUrl',

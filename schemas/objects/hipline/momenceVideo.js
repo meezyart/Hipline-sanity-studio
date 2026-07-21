@@ -21,6 +21,13 @@ export default {
       type: 'excerptPortableText'
     },
     {
+      name: 'featuredPass',
+      title: 'On-Demand purchase pass',
+      description: 'Select the pass shown above the video library for customers who still need access.',
+      type: 'reference',
+      to: [{ type: 'passBlock' }]
+    },
+    {
       name: 'videoLibraryUrl',
       title: 'Video Library URL override',
       description: 'Leave blank to use the site-level Momence setting.',
