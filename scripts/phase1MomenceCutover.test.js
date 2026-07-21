@@ -56,7 +56,7 @@ test('builds a minimal managed purchase patch', () => {
     purchaseProvider: 'momence',
     purchaseUrl: giftCards.purchaseUrl,
     purchaseButtonLabel: 'Buy Now',
-    purchasePresentation: 'external-link'
+    purchasePresentation: 'popup'
   })
 })
 

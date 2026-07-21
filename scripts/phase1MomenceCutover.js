@@ -97,9 +97,7 @@ const SETTINGS_DOCUMENT = {
   }
 }
 
-const RELEASE_WARNINGS = [
-  'Sliding Scale has no approved tiered Momence destination and must remain disabled or receive an approved URL before production cutover.'
-]
+const RELEASE_WARNINGS = []
 
 const ON_DEMAND_PAGE = {
   _id: 'pageMomenceOnDemand',
@@ -127,7 +125,7 @@ const buildPassPatch = update => ({
   purchaseProvider: 'momence',
   purchaseUrl: update.purchaseUrl,
   purchaseButtonLabel: 'Buy Now',
-  purchasePresentation: update.membershipId ? 'popup' : 'external-link',
+  purchasePresentation: 'popup',
   ...(update.membershipId ? { momenceProductId: String(update.membershipId) } : {})
 })
 
