@@ -20,13 +20,13 @@ export default {
             type: 'object',
             fields: [{
                 name: 'showLogin',
-                title: 'Show Mind Body Login Button',
-                description: '',
+                title: 'Show Account Sign-In Icon',
+                description: 'Shows the Momence account sign-in icon in the header.',
                 type: 'boolean'
             }, {
                 name: 'showCart',
-                title: 'Show Cart Button',
-                description: '',
+                title: 'Show Cart Icon',
+                description: 'Shows the cart icon in the header.',
                 type: 'boolean'
             }, {
                 name: 'showButton',
@@ -34,12 +34,6 @@ export default {
                 description: '',
                 type: 'boolean'
             }]
-        },
-        {
-            name: 'topAccount',
-            title: 'Top Account Button',
-            description: 'This is the Mbo account link',
-            type: 'mboSection'
         },
         {
             name: 'topCtaLink',

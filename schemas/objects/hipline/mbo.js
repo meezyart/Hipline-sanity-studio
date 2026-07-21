@@ -1,24 +1,21 @@
 export default {
   name: 'mboSection',
-            title: 'Mind Body Data Info',
-            description: 'This is the info you get when you create a link in Mbo Backend',
+            title: 'Legacy Provider Data',
+            description: 'Retained only so older documents remain readable. New purchases are managed with Momence fields.',
             type: 'object',
             fields: [{
                     name: 'dataId',
-                    title: 'Data Service id',
-                    description: 'Look for data-service-id="166" ',
+                    title: 'Legacy Service ID',
                     type: 'number'
                 },
                 {
                     name: 'dataType',
-                    title: 'Data Type',
-                    description: 'Look for data-type="pricing-link" ',
+                    title: 'Legacy Data Type',
                     type: 'string'
                 },
                 {
                     name: 'dataLinkClass',
-                    title: 'Data Link Class',
-                    description: 'Look for data-link-class="healcode-contract-text-link" enter just the name example:"healcode-contract-text-link"',
+                    title: 'Legacy Link Class',
                     type: 'string'
                 },
                 {
